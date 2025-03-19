@@ -1,0 +1,37 @@
+.timelines {
+  border-image: linear-gradient(
+      to bottom,
+      var(--foreground) 0%,
+      var(--muted) 80%
+    )
+    1;
+  border-width: 4px;
+  border-style: solid;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  padding-left: var(--spacing-5);
+}
+
+.timeline__item::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--foreground);
+  border-radius: 50%;
+  left: -29.5px;
+  top: 0;
+}
+
+.timeline__item:last-child::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid var(--foreground);
+  background-color: var(--background);
+  border-radius: 50%;
+  left: -1.85rem;
+  top: 0;
+}
