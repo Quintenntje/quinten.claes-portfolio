@@ -10,8 +10,35 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scripts_navigation_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scripts/navigation.js */ "./src/scripts/navigation.js");
+/* harmony import */ var _scripts_mouseAnimations_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/mouseAnimations.js */ "./src/scripts/mouseAnimations.js");
+
 
 (0,_scripts_navigation_js__WEBPACK_IMPORTED_MODULE_0__.expandNavigationMenu)();
+(0,_scripts_mouseAnimations_js__WEBPACK_IMPORTED_MODULE_1__.showBlurEffectOnMouse)();
+
+/***/ }),
+
+/***/ "./src/scripts/mouseAnimations.js":
+/*!****************************************!*\
+  !*** ./src/scripts/mouseAnimations.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   showBlurEffectOnMouse: () => (/* binding */ showBlurEffectOnMouse)
+/* harmony export */ });
+function showBlurEffectOnMouse() {
+  var $blur = document.getElementById("blur");
+  document.addEventListener("mousemove", function (e) {
+    $blur.classList.add("blur--active");
+    var mouseY = e.clientY + window.scrollY;
+    var mouseX = e.clientX;
+    +window.scrollX;
+    $blur.style.top = "".concat(mouseY, "px");
+    $blur.style.left = "".concat(mouseX, "px");
+  });
+}
 
 /***/ }),
 

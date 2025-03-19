@@ -1,5 +1,5 @@
 .img--circle {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
+  border-radius: var(--radius-rounded);
+  width: 80px;
+  height: 80px;
 }
