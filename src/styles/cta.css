@@ -1,0 +1,13 @@
+.cta{
+    width: 100%;
+    background-color: var(--muted);
+    padding: 2rem;
+}
+.cta__title{
+    font-size: var(--font-size-6xl);
+}
+.cta__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

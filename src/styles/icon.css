@@ -1,0 +1,16 @@
+.icon{
+    color: var(--foreground);
+   font-size: var(--font-size-base);
+}
+
+.icon--big{
+    font-size: var(--font-size-xl);
+}
+
+.icon--spacing-right{
+    margin-inline-end: var(--spacing-2);
+}
+
+.icon--spacing-left{
+    margin-inline-start: var(--spacing-2);
+}

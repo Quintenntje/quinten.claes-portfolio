@@ -1,0 +1,92 @@
+/* color-scheme: https://ui.shadcn.com/themes */
+:root {
+    /* Colors */
+    --background: hsl(0, 0%, 100%);
+    --foreground: hsl(240, 10%, 3.9%);
+    --card: hsl(0, 0%, 100%);
+    --card-foreground: hsl(240, 10%, 3.9%);
+    --popover: hsl(0, 0%, 100%);
+    --popover-foreground: hsl(240, 10%, 3.9%);
+    --primary: hsl(240, 5.9%, 10%);
+    --primary-foreground: hsl(0, 0%, 98%);
+    --secondary: hsl(240, 4.8%, 95.9%);
+    --secondary-foreground: hsl(240, 5.9%, 10%);
+    --muted: hsl(240, 4.8%, 95.9%);
+    --muted-foreground: hsl(240, 3.8%, 46.1%);
+    --accent: hsl(240, 4.8%, 95.9%);
+    --accent-foreground: hsl(240, 5.9%, 10%);
+    --destructive: hsl(0, 84.2%, 60.2%);
+    --destructive-foreground: hsl(0, 0%, 98%);
+    --border: hsl(240, 5.9%, 90%);
+    --input: hsl(240, 5.9%, 90%);
+    --ring: hsl(240, 5.9%, 10%);
+
+
+    @media (prefers-color-scheme: dark) {
+        --background: hsl(240, 10%, 3.9%);
+        --foreground: hsl(0, 0%, 98%);
+        --card: hsl(240, 10%, 3.9%);
+        --card-foreground: hsl(0, 0%, 98%);
+        --popover: hsl(240, 10%, 3.9%);
+        --popover-foreground: hsl(0, 0%, 98%);
+        --primary: hsl(0, 0%, 98%);
+        --primary-foreground: hsl(240, 5.9%, 10%);
+        --secondary: hsl(240, 3.7%, 15.9%);
+        --secondary-foreground: hsl(0, 0%, 98%);
+        --muted: hsl(240, 3.7%, 15.9%);
+        --muted-foreground: hsl(240, 5%, 64.9%);
+        --accent: hsl(240, 3.7%, 15.9%);
+        --accent-foreground: hsl(0, 0%, 98%);
+        --destructive: hsl(0, 62.8%, 30.6%);
+        --destructive-foreground: hsl(0, 0%, 98%);
+        --border: hsl(240, 3.7%, 15.9%);
+        --input: hsl(240, 3.7%, 15.9%);
+        --ring: hsl(240, 4.9%, 83.9%);
+
+    }
+
+    /* Border radius */
+    --radius: 1rem;
+
+    --container-width: 80rem;
+
+    /* Spacing */
+    --spacing-0: 0rem;
+    --spacing-1: 0.25rem; /* 4px */
+    --spacing-2: 0.5rem;  /* 8px */
+    --spacing-3: 0.75rem; /* 12px */
+    --spacing-4: 1rem;    /* 16px */
+    --spacing-5: 1.25rem; /* 20px */
+    --spacing-6: 1.5rem;  /* 24px */
+    --spacing-8: 2rem;    /* 32px */
+    --spacing-10: 2.5rem; /* 40px */
+    --spacing-12: 3rem;   /* 48px */
+    --spacing-16: 4rem;   /* 64px */
+    --spacing-20: 5rem;   /* 80px */
+    --spacing-24: 6rem;   /* 96px */
+    --spacing-32: 8rem;   /* 128px */
+
+    /* Font Sizes */
+    --font-size-xs: 0.75rem; /* 12px */
+    --font-size-sm: 0.875rem; /* 14px */
+    --font-size-base: 1rem; /* 16px */
+    --font-size-lg: 1.125rem; /* 18px */
+    --font-size-xl: 1.25rem; /* 20px */
+    --font-size-2xl: 1.5rem; /* 24px */
+    --font-size-3xl: 1.875rem; /* 30px */
+    --font-size-4xl: 2.25rem; /* 36px */
+    --font-size-5xl: 3rem; /* 48px */
+    --font-size-6xl: 3.75rem; /* 60px */
+    --font-size-7xl: 4.5rem; /* 72px */
+    --font-size-8xl: 6rem; /* 96px */
+    --font-size-9xl: 8rem; /* 128px */
+
+    /* Font Weights */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+}

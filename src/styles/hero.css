@@ -1,0 +1,13 @@
+.hero{
+    height: 50dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100rem;
+}
+
+.hero__links{
+    display: flex;
+    gap: var(--spacing-4);
+    margin-top: var(--spacing-4);
+}

@@ -1,0 +1,21 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form__group{
+    display: flex;
+    flex-direction: column;
+}
+
+.form__group__label {
+    margin-bottom: var(--spacing-2);
+}
+
+.form__group__label:has(+ .input[required])::after{
+    content: "*";
+    color: var(--primary);
+}
+
+

@@ -1,6 +1,86 @@
-body{
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+@import "reset.css";
+@import "variables.css";
+@import "footer.css";
+@import "navbar.css";
+@import "cta.css";
+@import "form.css";
+@import "hero.css";
+@import "button.css";
+@import "input.css";
+@import "page-heading.css";
+@import "icon.css";
+@import "grid.css";
+@import "card.css";
+@import "link.css";
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+.main {
+  margin: var(--spacing-20) 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--foreground);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+h1 {
+  font-size: var(--font-size-6xl);
+}
+
+h2 {
+  font-size: var(--font-size-4xl);
+}
+
+section {
+  margin: var(--spacing-8) 0;
+
+  @media (min-width: 768px) {
+    margin: var(--spacing-16) 0;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--spacing-4);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  padding: var(--spacing-2);
+  z-index: 100;
+}
+
+.skip-to-content:focus {
+  top: 0;
 }
