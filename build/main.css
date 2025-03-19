@@ -409,7 +409,13 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: var(--font-size-6xl);
   line-height: 1;
 }
+.heading {
+  margin-bottom: var(--spacing-4);
+}
 
+.heading--spacing-big {
+  margin: var(--spacing-8) 0;
+}
 .heading--small {
   font-size: var(--font-size-lg);
   color: var(--muted-foreground);
@@ -468,10 +474,18 @@ p, h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
+.card--primary {
+  border: 1px solid var(--border);
+  padding: var(--spacing-4);
+}
+
 .card__title {
-  color: white;
   font-size: var(--font-size-lg);
   margin: var(--spacing-2) 0;
+}
+
+.card__title--larger{
+  font-size: var(--font-size-2xl);
 }
 
 .card__image {
@@ -580,6 +594,15 @@ p, h1, h2, h3, h4, h5, h6 {
   padding-left: var(--spacing-5);
 }
 
+.timeline__item {
+  margin-bottom: var(--spacing-5);
+}
+
+.timeline__heading__date{
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+}
+
 .timeline__item::after {
   content: "";
   position: absolute;
@@ -587,8 +610,8 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 1rem;
   background-color: var(--foreground);
   border-radius: 50%;
-  left: -29.5px;
-  top: 0;
+  left: -1.9rem;
+  top: -1px;
 }
 
 .timeline__item:last-child::after {
@@ -596,7 +619,7 @@ p, h1, h2, h3, h4, h5, h6 {
   position: absolute;
   width: 1rem;
   height: 1rem;
-  border: 2px solid var(--foreground);
+  border: 2px solid var(--border);
   background-color: var(--background);
   border-radius: 50%;
   left: -1.85rem;

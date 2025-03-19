@@ -5,10 +5,18 @@
   position: relative;
 }
 
+.card--primary {
+  border: 1px solid var(--border);
+  padding: var(--spacing-4);
+}
+
 .card__title {
-  color: white;
   font-size: var(--font-size-lg);
   margin: var(--spacing-2) 0;
+}
+
+.card__title--larger{
+  font-size: var(--font-size-2xl);
 }
 
 .card__image {
