@@ -294,27 +294,29 @@ p, h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
     align-items: center;
 }
-.form{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+.contact__form {
+  width: 100%;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.form__group{
-    display: flex;
-    flex-direction: column;
+.form__group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .form__group__label {
-    margin-bottom: var(--spacing-2);
+  margin-bottom: var(--spacing-2);
 }
 
-.form__group__label:has(+ .input[required])::after{
-    content: "*";
-    color: var(--primary);
+.form__group__label:has(+ .input[required])::after {
+  content: "*";
+  color: var(--primary);
 }
-
-
 
 .hero{
     height: 50dvh;
@@ -372,31 +374,30 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 
-.input{
-    background-color: var(--input);
-    color: var(--foreground);
-    outline: none;
-    border: none;
+.input {
+  background-color: var(--input);
+  color: var(--foreground);
+  outline: none;
+  border: none;
 }
 
-.input--transparent{
-    background-color: transparent;
-    border-bottom: 2px solid var(--border);
+.input--transparent {
+  background-color: transparent;
+  border-bottom: 2px solid var(--border);
 }
 
-.input:focus{
-    border-bottom: 2px solid var(--primary);
+.input:focus {
+  border-bottom: 2px solid var(--primary);
 }
 
-.input--big{
-    field-sizing: content;
-    resize: vertical;
-    min-width: 200px;
+.input--big {
+  field-sizing: content;
+  resize: vertical;
+  min-width: 200px;
 }
 
-
-.input:user-invalid{
-    border-bottom: 2px solid var(--destructive);
+.input:user-invalid {
+  border-bottom: 2px solid var(--destructive);
 }
 
 .page_heading__title{
@@ -428,12 +429,18 @@ p, h1, h2, h3, h4, h5, h6 {
 .grid {
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
 .grid--larger {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+@media screen and (min-width: 768px) {
+  .grid--cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .card {

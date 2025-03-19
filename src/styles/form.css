@@ -1,21 +1,23 @@
-.form{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+.contact__form {
+  width: 100%;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.form__group{
-    display: flex;
-    flex-direction: column;
+.form__group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .form__group__label {
-    margin-bottom: var(--spacing-2);
+  margin-bottom: var(--spacing-2);
 }
 
-.form__group__label:has(+ .input[required])::after{
-    content: "*";
-    color: var(--primary);
+.form__group__label:has(+ .input[required])::after {
+  content: "*";
+  color: var(--primary);
 }
-
-

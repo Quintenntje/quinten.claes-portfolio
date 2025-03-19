@@ -1,26 +1,25 @@
-.input{
-    background-color: var(--input);
-    color: var(--foreground);
-    outline: none;
-    border: none;
+.input {
+  background-color: var(--input);
+  color: var(--foreground);
+  outline: none;
+  border: none;
 }
 
-.input--transparent{
-    background-color: transparent;
-    border-bottom: 2px solid var(--border);
+.input--transparent {
+  background-color: transparent;
+  border-bottom: 2px solid var(--border);
 }
 
-.input:focus{
-    border-bottom: 2px solid var(--primary);
+.input:focus {
+  border-bottom: 2px solid var(--primary);
 }
 
-.input--big{
-    field-sizing: content;
-    resize: vertical;
-    min-width: 200px;
+.input--big {
+  field-sizing: content;
+  resize: vertical;
+  min-width: 200px;
 }
 
-
-.input:user-invalid{
-    border-bottom: 2px solid var(--destructive);
+.input:user-invalid {
+  border-bottom: 2px solid var(--destructive);
 }

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./build/main.css" />
+    <title>Quinten Claes</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav__logo">
+        <a href="index.html">logo</a>
+      </div>
+      <ul id="nav-list" class="nav__list">
+        <li class="nav__list-item">
+          <a class="list-item__link list-item__link--hover" href="index.html"
+            >Home</a
+          >
+        </li>
+        <li class="nav__list-item">
+          <a class="list-item__link list-item__link--hover" href="projects.html"
+            >Projects</a
+          >
+        </li>
+        <li class="nav__list-item">
+          <a class="list-item__link list-item__link--hover" href="about.html"
+            >About</a
+          >
+        </li>
+        <li class="nav__list-item">
+          <a
+            class="list-item__link list-item__link--hover list-item__link--active"
+            href="contact.html"
+            aria-current="page"
+            >Contact</a
+          >
+        </li>
+      </ul>
+      <div class="nav__icon--mobile-visible">
+        <button
+          id="open-nav"
+          class="btn--transparent"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="nav-list"
+        >
+          <i class="icon icon--big fas fa-bars"></i>
+        </button>
+        <button
+          id="close-nav"
+          class="nav__button--hidden nav__menu--top btn--transparent"
+          aria-label="Close menu"
+          aria-controls="nav-list"
+        >
+          <i class="icon icon--big fas fa-close"></i>
+        </button>
+      </div>
+    </nav>
+
+    <main id="main-content" class="main container">
+      <section class="page-heading">
+        <h1 class="page_heading__title">Contact</h1>
+        <h2 class="page_heading__subtitle">Get in touch.</h2>
+      </section>
+      <div class="grid grid--cols-2">
+        <section class="contact__form">
+          <form class="form" action="/mail">
+            <label class="form__group">
+              <span class="form__group__label">Name</span>
+              <input
+                class="input input--transparent"
+                type="text"
+                name="name"
+                placeholder="Enter your name.."
+                required
+              />
+            </label>
+
+            <label class="form__group">
+              <span class="form__group__label">Email</span>
+              <input
+                class="input input--transparent"
+                type="email"
+                name="email"
+                placeholder="Enter your email.."
+                required
+              />
+            </label>
+
+            <label class="form__group">
+              <span class="form__group__label">Message</span>
+              <textarea
+                class="input input--transparent input--big"
+                name="message"
+                placeholder="Enter your message"
+                required
+              ></textarea>
+            </label>
+
+            <div>
+              <button class="btn btn--primary">Send</button>
+            </div>
+          </form>
+        </section>
+        <section>
+          <h2>Contact Info</h2>
+          <ul>
+            <li>
+              <a class="link" href="mailto:info@quintenclaes.com"
+                >info@quintenclaes.com</a
+              >
+            </li>
+            <li>
+              <a class="link" href="tel:+32499170602">+32499170602</a>
+            </li>
+
+            <li>
+              <i
+                class="icon icon--big icon--spacing-right fa-brands fa-github"
+              ></i>
+              <a class="link" href="https://github.com/Quintenntje">Github</a>
+            </li>
+            <li>
+              <i
+                class="icon icon--big icon--spacing-right fa-brands fa-linkedin"
+              ></i>
+              <a
+                class="link"
+                href="https://www.linkedin.com/in/quinten-claes-5964a8344/"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <section class="cta">
+      <div class="cta__content container grid">
+        <h2 class="cta__title">Get in touch.</h2>
+        <a class="btn btn--primary" href="contact.html">Contact me</a>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>&copy;2025 Made by Quinten Claes</p>
+    </footer>
+
+    <script src="/build/app.js" type="module"></script>
+  </body>
+</html>
