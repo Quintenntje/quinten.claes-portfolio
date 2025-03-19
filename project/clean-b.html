@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/build/main.css" />
+    <title>Quinten Claes</title>
+  </head>
+  <body>
+    <div aria-hidden="true" id="blur" class="blur"></div>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav__logo">
+        <a href="index.html">logo</a>
+      </div>
+      <ul id="nav-list" class="nav__list">
+        <li class="nav__list-item">
+          <a class="list-item__link list-item__link--hover" href="/index.html"
+            >Home</a
+          >
+        </li>
+        <li class="nav__list-item">
+          <a
+            class="list-item__link list-item__link--hover"
+            href="/projects.html"
+            >Projects</a
+          >
+        </li>
+        <li class="nav__list-item">
+          <a class="list-item__link list-item__link--hover" href="/about.html"
+            >About</a
+          >
+        </li>
+        <li class="nav__list-item">
+          <a class="list-item__link list-item__link--hover" href="/contact.html"
+            >Contact</a
+          >
+        </li>
+      </ul>
+      <div class="nav__icon--mobile-visible">
+        <button
+          id="open-nav"
+          class="btn--transparent"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="nav-list"
+        >
+          <i class="icon icon--big fas fa-bars"></i>
+        </button>
+        <button
+          id="close-nav"
+          class="nav__button--hidden nav__menu--top btn--transparent"
+          aria-label="Close menu"
+          aria-controls="nav-list"
+        >
+          <i class="icon icon--big fas fa-close"></i>
+        </button>
+      </div>
+    </nav>
+
+    <main id="main-content" class="main container">
+      <section class="page-heading">
+        <h1 class="page_heading__title">Clean-B</h1>
+        <h2 class="page_heading__subtitle">Website</h2>
+      </section>
+      <section class="grid grid--cols-2">
+        <div>
+          <h3>Client</h3>
+          <p>Lander Baert</p>
+        </div>
+        <div>
+          <a href="https://www.clean-b.be/" class="link">
+            <i class="icon fas fa-up-right-from-square"></i>
+            <span>Visit the website</span>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <p>
+          This website was developed with a focus on simplicity, performance,
+          and scalability. Built using <strong>basic HTML</strong>,
+          <strong>CSS</strong>, and <strong>JavaScript</strong>, it ensures a
+          clean and responsive design across all devices, providing an optimal
+          user experience. To streamline development and deployment, I utilized
+          <strong>Docker</strong> with <strong>Nginx</strong> as the web server,
+          enabling efficient containerization and easy scalability.
+        </p>
+        <p>
+          For continuous integration and delivery (CI/CD), I integrated
+          <strong>Jenkins</strong>, allowing for seamless updates and fast
+          deployment cycles. This ensures that any changes made to the website
+          are automatically tested and deployed, maintaining a high level of
+          quality and reliability.
+        </p>
+        <p>
+          Additionally, I plan to add a <strong>contact form</strong> using
+          <strong>PHP</strong> to allow visitors to easily get in touch. This
+          form will be securely processed, making communication between the
+          website's users and the business seamless.
+        </p>
+        <p>
+          The combination of these technologies guarantees a fast, secure, and
+          modern web experience for visitors while allowing easy updates and
+          maintenance on the backend.
+        </p>
+      </section>
+      <section>
+        <div class="grid grid--larger">
+          <img
+            src="http://portfolio.ddev.site/assets/media/Schermafbeelding-2024-10-04-153840_2025-03-09-221142_knyy.png"
+            alt="Schermafbeelding 2024 10 04 153840"
+          />
+          <img
+            src="http://portfolio.ddev.site/assets/media/Schermafbeelding-2025-03-09-231237.png"
+            alt="Schermafbeelding 2025 03 09 231237"
+          />
+          <img
+            src="http://portfolio.ddev.site/assets/media/Schermafbeelding-2025-03-09-231225.png"
+            alt="Schermafbeelding 2025 03 09 231225"
+          />
+        </div>
+      </section>
+    </main>
+
+    <section class="cta">
+      <div class="cta__content container grid grid--cols-2">
+        <h2 class="cta__title">Get in touch.</h2>
+        <a class="btn btn--primary" href="contact.html">Contact me</a>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>&copy;2025 Made by Quinten Claes</p>
+    </footer>
+
+    <script src="/build/app.js" type="module"></script>
+  </body>
+</html>
