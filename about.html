@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./build/main.css" />
+    <title>Quinten Claes</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav__logo">
+        <a href="index.html">logo</a>
+      </div>
+      <ul id="nav-list" class="nav__list">
+        <li class="nav__list-item">
+          <a class="list-item__link list-item__link--hover" href="index.html"
+            >Home</a
+          >
+        </li>
+        <li class="nav__list-item">
+          <a class="list-item__link list-item__link--hover" href="projects.html"
+            >Projects</a
+          >
+        </li>
+        <li class="nav__list-item">
+          <a
+            class="list-item__link list-item__link--hover list-item__link--active"
+            href="about.html"
+            aria-current="page"
+            >About</a
+          >
+        </li>
+        <li class="nav__list-item">
+          <a class="list-item__link list-item__link--hover" href="contact.html"
+            >Contact</a
+          >
+        </li>
+      </ul>
+      <div class="nav__icon--mobile-visible">
+        <button
+          id="open-nav"
+          class="btn--transparent"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="nav-list"
+        >
+          <i class="icon icon--big fas fa-bars"></i>
+        </button>
+        <button
+          id="close-nav"
+          class="nav__button--hidden nav__menu--top btn--transparent"
+          aria-label="Close menu"
+          aria-controls="nav-list"
+        >
+          <i class="icon icon--big fas fa-close"></i>
+        </button>
+      </div>
+    </nav>
+
+    <main id="main-content" class="main container">
+      <section class="page-heading">
+        <h1 class="page_heading__title">About me</h1>
+        <h2 class="page_heading__subtitle">Learn More about me</h2>
+      </section>
+
+      <section>
+        <p>
+          My name is Quinten Claes, and I am a student at Artevelde University
+          College in Ghent. From a young age, I’ve always had a passion for
+          computer technologies. Growing up, I was fascinated by how things work
+          behind the scenes—whether it was tinkering with devices, building
+          websites, or exploring how digital systems come together. It was clear
+          to me early on that I wanted to pursue a career in technology.
+        </p>
+        <p>
+          As I continue my studies, I focus on developing my skills in web
+          development and understanding the broader tech landscape. Beyond just
+          writing code, I’m excited about creating practical, user-centered
+          solutions that make an impact. I believe in the power of technology to
+          solve real-world problems, and I’m always eager to learn more, explore
+          new technologies, and challenge myself with every project.
+        </p>
+        <p>
+          When I’m not coding, I enjoy hanging out with friends and staying
+          active at the gym. I believe a balance of socializing and staying fit
+          is key to maintaining both mental and physical health. I’m excited for
+          what the future holds and look forward to contributing to the tech
+          world in meaningful ways.
+        </p>
+      </section>
+
+      <section>
+        <div>
+          <div>
+            <h3>Informatica Beheer GO TALENT!</h3>
+            <span>2021-2023</span>
+          </div>
+          <p>
+            I learned the basics of web development including HTML, CSS, basic
+            JavaScript, PHP, and SQL.
+          </p>
+        </div>
+        <div>
+          <div>
+            <h3>Working from home</h3>
+            <span>2023-2024</span>
+          </div>
+          <p>
+            worked with my dad for a year, learning Linux servers, Docker,
+            CI/CD, OOP with PHP, and using Twig &amp; HTMX for dynamic web
+            development.
+          </p>
+        </div>
+        <div>
+          <div>
+            <h3>Programming | Artevelde University College</h3>
+            <span>2024 - Current</span>
+          </div>
+          <p>
+            I learned more about web development, advanced JavaScript, Craft CMS
+            for content management, and I&#039;m still learning and improving my
+            skills.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <section class="cta">
+      <div class="cta__content container grid">
+        <h2 class="cta__title">Get in touch.</h2>
+        <a class="btn btn--primary" href="contact.html">Contact me</a>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>&copy;2025 Made by Quinten Claes</p>
+    </footer>
+
+    <script src="/build/app.js" type="module"></script>
+  </body>
+</html>
