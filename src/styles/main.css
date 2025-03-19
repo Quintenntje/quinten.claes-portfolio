@@ -61,6 +61,10 @@ section {
   padding-inline: var(--spacing-4);
 }
 
+.container--md {
+  max-width: var(--container-width-md);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

@@ -109,6 +109,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --radius-full: 100%;
 
   --container-width: 80rem;
+  --container-width-md: 64rem;
 
   /* Spacing */
   --spacing-0: 0rem;
@@ -453,6 +454,10 @@ p, h1, h2, h3, h4, h5, h6 {
   align-items: start;
 }
 
+.grid--left {
+  justify-items: start;
+}
+
 .grid--larger {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
@@ -671,6 +676,10 @@ section {
   max-width: var(--container-width);
   margin-inline: auto;
   padding-inline: var(--spacing-4);
+}
+
+.container--md {
+  max-width: var(--container-width-md);
 }
 
 .sr-only {

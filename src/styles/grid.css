@@ -9,6 +9,10 @@
   align-items: start;
 }
 
+.grid--left {
+  justify-items: start;
+}
+
 .grid--larger {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
