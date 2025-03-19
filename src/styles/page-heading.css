@@ -21,6 +21,11 @@
   margin: var(--spacing-4) 0;
 }
 
+.heading--large {
+  font-size: var(--font-size-3xl);
+  margin: var(--spacing-4) 0;
+}
+
 .heading--uppercase {
   text-transform: uppercase;
 }

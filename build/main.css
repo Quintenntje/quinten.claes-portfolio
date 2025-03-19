@@ -423,6 +423,11 @@ p, h1, h2, h3, h4, h5, h6 {
   margin: var(--spacing-4) 0;
 }
 
+.heading--large {
+  font-size: var(--font-size-3xl);
+  margin: var(--spacing-4) 0;
+}
+
 .heading--uppercase {
   text-transform: uppercase;
 }
@@ -573,6 +578,13 @@ p, h1, h2, h3, h4, h5, h6 {
         border-bottom: 1px solid var(--foreground);
     }
 }
+.img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .img--circle {
   border-radius: var(--radius-rounded);
   width: 80px;
