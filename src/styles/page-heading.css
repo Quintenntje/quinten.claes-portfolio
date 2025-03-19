@@ -1,10 +1,20 @@
-.page_heading__title{
-    color: var(--muted-foreground);
-    font-size: var(--font-size-2xl);
-    font-weight: var(--font-weight-light);
+.page_heading__title {
+  color: var(--muted-foreground);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-light);
 }
 
-.page_heading__subtitle{
-    font-size: var(--font-size-6xl);
-    line-height: 1;
+.page_heading__subtitle {
+  font-size: var(--font-size-6xl);
+  line-height: 1;
+}
+
+.heading--small {
+  font-size: var(--font-size-lg);
+  color: var(--muted-foreground);
+  margin: var(--spacing-4) 0;
+}
+
+.heading--uppercase {
+  text-transform: uppercase;
 }

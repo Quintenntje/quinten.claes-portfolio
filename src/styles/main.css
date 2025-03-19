@@ -12,6 +12,7 @@
 @import "grid.css";
 @import "card.css";
 @import "link.css";
+@import "img.css";
 
 body {
   font-family: "Inter", sans-serif;

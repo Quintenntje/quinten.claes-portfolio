@@ -1,4 +1,4 @@
-.contact__form {
+.contact__form, .contact__details {
   width: 100%;
 }
 .form {
@@ -10,7 +10,6 @@
 .form__group {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
 .form__group__label {
