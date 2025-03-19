@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./build/main.css" />
+    <title>Quinten Claes</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav__logo">
+        <a href="index.html">logo</a>
+      </div>
+      <ul id="nav-list" class="nav__list">
+        <li class="nav__list-item">
+          <a
+            class="list-item__link list-item__link--hover "
+            href="index.html"
+            >Home</a
+          >
+        </li>
+        <li class="nav__list-item">
+          <a
+            class="list-item__link list-item__link--hover list-item__link--active"
+            href="projects.html"
+            aria-current="page"
+            >Projects</a
+          >
+        </li>
+        <li class="nav__list-item">
+          <a class="list-item__link list-item__link--hover" href="about.html"
+            >About</a
+          >
+        </li>
+        <li class="nav__list-item">
+          <a class="list-item__link list-item__link--hover" href="contact.html"
+            >Contact</a
+          >
+        </li>
+      </ul>
+      <div class="nav__icon--mobile-visible">
+        <button
+          id="open-nav"
+          class="btn--transparent"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="nav-list"
+        >
+          <i class="icon icon--big fas fa-bars"></i>
+        </button>
+        <button
+          id="close-nav"
+          class="nav__button--hidden nav__menu--top btn--transparent"
+          aria-label="Close menu"
+          aria-controls="nav-list"
+        >
+          <i class="icon icon--big fas fa-close"></i>
+        </button>
+      </div>
+    </nav>
+
+    <main id="main-content" class="main container">
+      <section>
+        <section class="page-heading">
+          <h1 class="page_heading__title">Projects</h1>
+          <h2 class="page_heading__subtitle">See what I made</h2>
+        </section>
+      </section>
+
+      <section>
+        <ul class="grid grid--larger">
+          <li>
+            <article class="card card--secondary">
+              <img
+                class="card__image"
+                src="./src/images/project/homepage.png"
+                alt="Cooking Masters"
+              />
+
+              <div class="card__content">
+                <h3 class="card__title">Cooking Masters</h3>
+                <span class="card__tag">School</span>
+              </div>
+              <a
+                class="card__link--full"
+                href="http://portfolio.ddev.site/projects/cooking-masters"
+                ><span class="sr-only">Cooking Masters</span></a
+              >
+            </article>
+          </li>
+          <li>
+            <article class="card card--secondary">
+              <img
+                class="card__image"
+                src="./src/images/project/homepage.png"
+                alt="Cooking Masters"
+              />
+
+              <div class="card__content">
+                <h3 class="card__title">Cooking Masters</h3>
+                <span class="card__tag">School</span>
+              </div>
+              <a
+                class="card__link--full"
+                href="http://portfolio.ddev.site/projects/cooking-masters"
+                ><span class="sr-only">Cooking Masters</span></a
+              >
+            </article>
+          </li>
+          <li>
+            <article class="card card--secondary">
+              <img
+                class="card__image"
+                src="./src/images/project/homepage.png"
+                alt="Cooking Masters"
+              />
+
+              <div class="card__content">
+                <h3 class="card__title">Cooking Masters</h3>
+                <span class="card__tag">School</span>
+              </div>
+              <a
+                class="card__link--full"
+                href="http://portfolio.ddev.site/projects/cooking-masters"
+                ><span class="sr-only">Cooking Masters</span></a
+              >
+            </article>
+          </li>
+          <li>
+            <article class="card card--secondary">
+              <img
+                class="card__image"
+                src="./src/images/project/clean-b.png"
+                alt="Clean-B"
+              />
+
+              <div class="card__content">
+                <h3 class="card__title">Clean-B</h3>
+                <span class="card__tag">Website</span>
+              </div>
+              <a
+                class="card__link--full"
+                href="http://portfolio.ddev.site/projects/clean-b"
+                ><span class="sr-only">Clean-B</span></a
+              >
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <section class="cta">
+      <div class="cta__content container grid">
+        <h2 class="cta__title">Get in touch.</h2>
+        <a class="btn btn--primary" href="contact.html">Contact me</a>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>&copy;2025 Made by Quinten Claes</p>
+    </footer>
+
+    <script src="/build/app.js" type="module"></script>
+  </body>
+</html>
