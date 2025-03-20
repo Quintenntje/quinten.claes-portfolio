@@ -1,7 +1,6 @@
 export function showBlurEffectOnMouse() {
-  const $blur = document.getElementById("blur");
+  const $blur = document.getElementById("blur-mouse");
   document.addEventListener("mousemove", (e) => {
-    $blur.classList.add("blur--active");
     const mouseY = e.clientY + window.scrollY;
     const mouseX = e.clientX;
     +window.scrollX;

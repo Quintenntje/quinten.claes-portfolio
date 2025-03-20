@@ -29,9 +29,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   showBlurEffectOnMouse: () => (/* binding */ showBlurEffectOnMouse)
 /* harmony export */ });
 function showBlurEffectOnMouse() {
-  var $blur = document.getElementById("blur");
+  var $blur = document.getElementById("blur-mouse");
   document.addEventListener("mousemove", function (e) {
-    $blur.classList.add("blur--active");
     var mouseY = e.clientY + window.scrollY;
     var mouseX = e.clientX;
     +window.scrollX;

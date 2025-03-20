@@ -1,0 +1,20 @@
+.blur {
+  display: block;
+  position: absolute;
+  background-color: var(--foreground);
+  border-radius: var(--radius-full);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.blur-mouse {
+  width: 30px;
+  height: 30px;
+  filter: blur(60px);
+}
+
+.blur-bg {
+  width: 100px;
+  height: 100px;
+  filter: blur(150px);
+}

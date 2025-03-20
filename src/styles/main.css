@@ -15,6 +15,7 @@
 @import "link.css";
 @import "img.css";
 @import "timeline.css";
+@import "blur.css";
 
 body {
   font-family: "Inter", sans-serif;
@@ -90,20 +91,4 @@ section {
 
 .skip-to-content:focus {
   top: 0;
-}
-
-.blur {
-  display: none;
-}
-
-.blur--active {
-  display: block;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background-color: var(--foreground);
-  filter: blur(60px);
-  border-radius: var(--radius-full);
-  transform: translate(-50%, -50%);
-  z-index: -1;
 }

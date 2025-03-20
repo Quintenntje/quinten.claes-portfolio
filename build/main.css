@@ -81,7 +81,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --input: hsl(240, 5.9%, 90%);
   --ring: hsl(240, 5.9%, 10%);
 
-  /* @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: dark) {
     --background: hsl(240, 10%, 3.9%);
     --foreground: hsl(0, 0%, 98%);
     --card: hsl(240, 10%, 3.9%);
@@ -101,7 +101,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --border: hsl(240, 3.7%, 15.9%);
     --input: hsl(240, 3.7%, 15.9%);
     --ring: hsl(240, 4.9%, 83.9%);
-  } */
+  }
 
   /* Border radius */
   --radius: 1rem;
@@ -698,6 +698,27 @@ p, h1, h2, h3, h4, h5, h6 {
   top: 0;
 }
 
+.blur {
+  display: block;
+  position: absolute;
+  background-color: var(--foreground);
+  border-radius: var(--radius-full);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.blur-mouse {
+  width: 30px;
+  height: 30px;
+  filter: blur(60px);
+}
+
+.blur-bg {
+  width: 100px;
+  height: 100px;
+  filter: blur(150px);
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -772,21 +793,5 @@ section {
 
 .skip-to-content:focus {
   top: 0;
-}
-
-.blur {
-  display: none;
-}
-
-.blur--active {
-  display: block;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background-color: var(--foreground);
-  filter: blur(60px);
-  border-radius: var(--radius-full);
-  transform: translate(-50%, -50%);
-  z-index: -1;
 }
 
