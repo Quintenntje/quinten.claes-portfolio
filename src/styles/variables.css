@@ -21,7 +21,7 @@
   --input: hsl(240, 5.9%, 90%);
   --ring: hsl(240, 5.9%, 10%);
 
-  @media (prefers-color-scheme: dark) {
+  /* @media (prefers-color-scheme: dark) {
     --background: hsl(240, 10%, 3.9%);
     --foreground: hsl(0, 0%, 98%);
     --card: hsl(240, 10%, 3.9%);
@@ -41,7 +41,7 @@
     --border: hsl(240, 3.7%, 15.9%);
     --input: hsl(240, 3.7%, 15.9%);
     --ring: hsl(240, 4.9%, 83.9%);
-  }
+  } */
 
   /* Border radius */
   --radius: 1rem;

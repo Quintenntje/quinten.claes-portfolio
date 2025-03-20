@@ -81,7 +81,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --input: hsl(240, 5.9%, 90%);
   --ring: hsl(240, 5.9%, 10%);
 
-  @media (prefers-color-scheme: dark) {
+  /* @media (prefers-color-scheme: dark) {
     --background: hsl(240, 10%, 3.9%);
     --foreground: hsl(0, 0%, 98%);
     --card: hsl(240, 10%, 3.9%);
@@ -101,7 +101,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --border: hsl(240, 3.7%, 15.9%);
     --input: hsl(240, 3.7%, 15.9%);
     --ring: hsl(240, 4.9%, 83.9%);
-  }
+  } */
 
   /* Border radius */
   --radius: 1rem;
@@ -433,6 +433,13 @@ p, h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+.text--bold {
+  font-weight: var(--font-weight-extrabold);
+}
+
+.text--bigger{
+    font-size: 1.25em; 
+}
 .icon{
     color: var(--foreground);
    font-size: var(--font-size-base);
@@ -467,6 +474,8 @@ p, h1, h2, h3, h4, h5, h6 {
 .grid--larger {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
+
+
 @media screen and (min-width: 768px) {
   .grid--cols-2 {
     grid-template-columns: repeat(2, 1fr);
@@ -475,6 +484,10 @@ p, h1, h2, h3, h4, h5, h6 {
   .grid--70-30 {
     grid-template-columns: 70% 30%;
     gap: 4rem;
+  }
+
+  .grid--col-span-2{
+    grid-column: span 2;
   }
 }
 
