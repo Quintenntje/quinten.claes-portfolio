@@ -158,128 +158,128 @@ p, h1, h2, h3, h4, h5, h6 {
     justify-content: center;
 }
 .nav {
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--spacing-6) var(--spacing-8);
-    font-size: var(--font-size-lg);
-    width: 100%;
-    background: hsla(var(--background), 0.25);
-    -webkit-backdrop-filter: blur(24px);
-            backdrop-filter: blur(24px);
-    border: 1px solid hsla(var(--border), 0.18);
-    z-index: 10000;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-6) var(--spacing-8);
+  font-size: var(--font-size-lg);
+  width: 100%;
+  background: hsla(var(--background), 0.25);
+  -webkit-backdrop-filter: blur(24px);
+          backdrop-filter: blur(24px);
+  border: 1px solid hsla(var(--border), 0.18);
+  z-index: 1000;
 }
 
 .nav__list {
-    position: fixed;
-    display: flex;
-    gap: var(--spacing-4);
-    transform: translateX(-200%);
-
+  position: fixed;
+  display: flex;
+  gap: var(--spacing-4);
+  transform: translateX(-200%);
 }
 
-.nav-list--open{
-    transform: translateX(0);
-    top: 0;
-    left: 0;
-    flex-direction: column;
-    gap: var(--spacing-8);
-    font-size: var(--font-size-4xl);
-    width: 100%;
-    height: 100dvh;
-    background: var(--background);
-    padding: var(--spacing-8);
-    transition: transform 0.5s ease-out;
+.nav-list--open {
+  transform: translateX(0);
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  font-size: var(--font-size-4xl);
+  width: 100%;
+  height: 100dvh;
+  background: var(--background);
+  padding: var(--spacing-8);
+  transition: transform 0.5s ease-out;
 
+  .nav__list-item {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
 
-    .nav__list-item {
-        animation: fadeIn 1s ease-out forwards;
-        opacity: 0;
-
-        &:nth-child(1) {
-            animation-delay: 0s;
-
-        }
-
-        &:nth-child(2) {
-            animation-delay: .4s;
-        }
-
-        &:nth-child(3) {
-            animation-delay: .6s;
-        }
-
-        &:nth-child(4) {
-            animation-delay: .8s;
-        }
-
-        &:nth-child(5) {
-            animation-delay: 1s;
-        }
+    &:nth-child(1) {
+      animation-delay: 0s;
     }
+
+    &:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 0.8s;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 1s;
+    }
+  }
 }
 
-.nav__menu--top{
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    z-index: 10000;
+.nav__menu--top {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 10000;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-1rem);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .list-item__link {
-    display: inline-block;
-    position: relative;
-    color: var(--foreground);
+  display: inline-block;
+  position: relative;
+  color: var(--foreground);
 }
 
-.list-item__link:hover, .list-item__link--active {
-    font-weight: var(--font-weight-semibold);
+.list-item__link:hover,
+.list-item__link--active {
+  font-weight: var(--font-weight-semibold);
 }
 
-.list-item__link::after, .list-item__link--active::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: -0.125rem;
-    left: 0;
-    background-color: var(--foreground);
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+.list-item__link::after,
+.list-item__link--active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -0.125rem;
+  left: 0;
+  background-color: var(--foreground);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
 
-.list-item__link--hover:hover::after, .list-item__link--active::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+.list-item__link--hover:hover::after,
+.list-item__link--active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
-.nav__button--hidden{
-    display: none;
+.nav__button--hidden {
+  display: none;
 }
 
 @media (min-width: 768px) {
-    .nav__icon--mobile-visible {
-        display: none;
-    }
-    .nav__list{
-        position: static;
-        transform: translateX(0);
-    }
+  .nav__icon--mobile-visible {
+    display: none;
+  }
+  .nav__list {
+    position: static;
+    transform: translateX(0);
+  }
 }
 
 .cta{
@@ -323,7 +323,6 @@ p, h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100rem;
 }
 
 .hero__links{
@@ -331,48 +330,50 @@ p, h1, h2, h3, h4, h5, h6 {
     gap: var(--spacing-4);
     margin-top: var(--spacing-4);
 }
-.btn{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: var(--spacing-4) var(--spacing-8);
-    border-radius: var(--radius);
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-4) var(--spacing-8);
+  border-radius: var(--radius);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.btn--transparent{
-    outline: none;
-    border: none;
-    background-color: transparent;
-}
-.btn--primary{
-    color: var(--primary-foreground);
-    background-color: var(--primary);
+.btn--small {
+  padding: var(--spacing-2) var(--spacing-4);
 }
 
-.btn--secondary{
-    color: var(--secondary-foreground);
-    background-color: transparent;
-    border: 1px solid var(--border);
+.btn--transparent {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.btn--primary {
+  color: var(--primary-foreground);
+  background-color: var(--primary);
+}
+
+.btn--secondary {
+  color: var(--secondary-foreground);
+  background-color: transparent;
+  border: 1px solid var(--border);
 }
 
 .btn--primary:hover {
-    background-color: var(--primary-foreground);
-    color: var(--primary);
+  background-color: var(--primary-foreground);
+  color: var(--primary);
 
-    transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.btn--secondary:hover{
-    background-color: var(--secondary-foreground);
-    color: var(--secondary);
-    transition: all 0.3s ease-in-out;
+.btn--secondary:hover {
+  background-color: var(--secondary-foreground);
+  color: var(--secondary);
+  transition: all 0.3s ease-in-out;
 }
-
-
 
 .input {
   background-color: var(--input);
@@ -487,6 +488,8 @@ p, h1, h2, h3, h4, h5, h6 {
 .card--primary {
   border: 1px solid var(--border);
   padding: var(--spacing-4);
+  background: var(--card);
+  color: var(--card-foreground);
 }
 
 .card__title {
@@ -494,7 +497,7 @@ p, h1, h2, h3, h4, h5, h6 {
   margin: var(--spacing-2) 0;
 }
 
-.card__title--larger{
+.card__title--larger {
   font-size: var(--font-size-2xl);
 }
 
@@ -517,6 +520,25 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .card--secondary {
+  @media screen and (max-width: 767px) {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.3) 80%,
+        rgba(0, 0, 0, 0.8) 100%
+      );
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
+
   .card__content {
     position: absolute;
     bottom: 1rem;
@@ -554,7 +576,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.card--secondary:after {
+.card--secondary:hover::after {
   content: "";
   position: absolute;
   top: 0;
@@ -569,6 +591,25 @@ p, h1, h2, h3, h4, h5, h6 {
   );
   pointer-events: none;
   z-index: -1;
+}
+
+@media screen and (max-width: 767px) {
+  .card--secondary::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.3) 80%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    pointer-events: none;
+    z-index: -1;
+  }
 }
 
 .link{
@@ -713,7 +754,7 @@ section {
   background-color: var(--background);
   color: var(--foreground);
   padding: var(--spacing-2);
-  z-index: 100;
+  z-index: 9999;
 }
 
 .skip-to-content:focus {

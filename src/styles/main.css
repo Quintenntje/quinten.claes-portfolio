@@ -84,7 +84,7 @@ section {
   background-color: var(--background);
   color: var(--foreground);
   padding: var(--spacing-2);
-  z-index: 100;
+  z-index: 9999;
 }
 
 .skip-to-content:focus {

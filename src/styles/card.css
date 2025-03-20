@@ -8,6 +8,8 @@
 .card--primary {
   border: 1px solid var(--border);
   padding: var(--spacing-4);
+  background: var(--card);
+  color: var(--card-foreground);
 }
 
 .card__title {
@@ -15,7 +17,7 @@
   margin: var(--spacing-2) 0;
 }
 
-.card__title--larger{
+.card__title--larger {
   font-size: var(--font-size-2xl);
 }
 
@@ -37,6 +39,25 @@
 }
 
 .card--secondary {
+  @media screen and (max-width: 767px) {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.3) 80%,
+        rgba(0, 0, 0, 0.8) 100%
+      );
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
+
   .card__content {
     position: absolute;
     bottom: 1rem;
@@ -74,7 +95,7 @@
   }
 }
 
-.card--secondary:after {
+.card--secondary:hover::after {
   content: "";
   position: absolute;
   top: 0;
@@ -89,4 +110,23 @@
   );
   pointer-events: none;
   z-index: -1;
+}
+
+@media screen and (max-width: 767px) {
+  .card--secondary::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.3) 80%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    pointer-events: none;
+    z-index: -1;
+  }
 }
