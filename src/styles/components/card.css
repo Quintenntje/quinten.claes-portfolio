@@ -130,3 +130,28 @@
     z-index: -1;
   }
 }
+
+.icon-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.icon-card {
+  padding: var(--spacing-4);
+  max-height: 60px;
+  max-width: 60px;
+  border: 1px solid var(--border);
+
+  &:hover {
+    background: var(--accent);
+    color: var(--accent-foreground);
+  }
+
+  .icon-card__icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
