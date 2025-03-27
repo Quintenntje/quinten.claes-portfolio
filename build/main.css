@@ -58,6 +58,24 @@ input, button, textarea, select {
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
+h1 {
+  font-size: var(--font-size-5xl);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: var(--font-size-6xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-4xl);
+  }
+}
+
 /* color-scheme: https://ui.shadcn.com/themes */
 :root {
   /* Colors */
@@ -323,18 +341,25 @@ p, h1, h2, h3, h4, h5, h6 {
   color: var(--primary);
 }
 
-.hero{
-    height: 50dvh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.hero {
+  min-height: 50dvh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.hero__links{
-    display: flex;
-    gap: var(--spacing-4);
-    margin-top: var(--spacing-4);
+.hero__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-4);
+
+  @media screen and (min-width: 500px) {
+    flex-direction: row;
+  }
 }
+
 .btn {
   display: inline-flex;
   justify-content: center;
@@ -902,14 +927,6 @@ a {
 ul {
   list-style-type: none;
   padding: 0;
-}
-
-h1 {
-  font-size: var(--font-size-6xl);
-}
-
-h2 {
-  font-size: var(--font-size-4xl);
 }
 
 section {

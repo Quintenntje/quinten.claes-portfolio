@@ -1,12 +1,18 @@
-.hero{
-    height: 50dvh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.hero {
+  min-height: 50dvh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.hero__links{
-    display: flex;
-    gap: var(--spacing-4);
-    margin-top: var(--spacing-4);
+.hero__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-4);
+
+  @media screen and (min-width: 500px) {
+    flex-direction: row;
+  }
 }
