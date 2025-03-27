@@ -1,0 +1,37 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  top: 20%;
+  scale: 1;
+  transition: scale 0.5s ease;
+  background-color: var(--popover);
+  color: var(--popover-foreground);
+  max-width: var(--container-width-md);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  @starting-style {
+    scale: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal__btn {
+  position: absolute;
+  top: calc(var(--spacing-4));
+  right: var(--spacing-4);
+  z-index: 1000;
+}
+
+.modal__btn__icon {
+  color: var(--color-black);
+}

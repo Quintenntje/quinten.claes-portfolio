@@ -127,21 +127,37 @@
       <section>
         <div class="grid grid--larger">
           <img
-            class="img"
+            data-trigger="contact-modal"
+            class=""
             src="/src/images/project/clean-b-1.png"
             alt="Clean-B website logo"
+            role="button"
+            tabindex="0"
           />
           <img
-            class="img"
+            data-trigger="contact-modal"
+            class="img project-img"
             src="/src/images/project/clean-b-2.png"
             alt="Clean-B website roofs section"
+            role="button"
+            tabindex="0"
           />
           <img
-            class="img"
+            data-trigger="contact-modal"
+            class="img project-img"
             src="/src/images/project/clean-b-3.png"
             alt="Clean-B website services section"
+            role="button"
+            tabindex="0"
           />
         </div>
+
+        <dialog class="modal" data-modal="contact-modal">
+          <div id="modal-content"></div>
+          <button class="btn--transparent modal__btn" data-close>
+            <i class="icon icon--extra-big modal__btn__icon fas fa-close"></i>
+          </button>
+        </dialog>
       </section>
     </main>
 
@@ -155,6 +171,6 @@
       <p>&copy;2025 Made by Quinten Claes</p>
     </footer>
 
-    <script src="/build/app.js" type="module"></script>
+    <script src="/build/main.js" type="module"></script>
   </body>
 </html>

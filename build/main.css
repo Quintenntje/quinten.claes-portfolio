@@ -103,6 +103,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --ring: hsl(240, 4.9%, 83.9%);
   }
 
+  --color-black: #000000;
   /* Border radius */
   --radius: 1rem;
   --radius-rounded: 50%;
@@ -110,6 +111,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
   --container-width: 80rem;
   --container-width-md: 64rem;
+  --container-width-sm: 40rem;
 
   /* Spacing */
   --spacing-0: 0rem;
@@ -443,22 +445,27 @@ p, h1, h2, h3, h4, h5, h6 {
 .text--bigger{
     font-size: 1.25em; 
 }
-.icon{
-    color: var(--foreground);
-   font-size: var(--font-size-base);
+.icon {
+  color: var(--foreground);
+  font-size: var(--font-size-base);
 }
 
-.icon--big{
-    font-size: var(--font-size-xl);
+.icon--big {
+  font-size: var(--font-size-xl);
 }
 
-.icon--spacing-right{
-    margin-inline-end: var(--spacing-2);
+.icon--extra-big {
+  font-size: var(--font-size-3xl);
 }
 
-.icon--spacing-left{
-    margin-inline-start: var(--spacing-2);
+.icon--spacing-right {
+  margin-inline-end: var(--spacing-2);
 }
+
+.icon--spacing-left {
+  margin-inline-start: var(--spacing-2);
+}
+
 .grid {
   display: grid;
   place-items: center;
@@ -574,6 +581,7 @@ p, h1, h2, h3, h4, h5, h6 {
       font-size: var(--font-size-2xl);
       margin: var(--spacing-2) 0;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      color: var(--color-black);
     }
 
     @media screen and (min-width: 768px) {
@@ -792,6 +800,44 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .svg {
   fill: currentColor;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  top: 20%;
+  scale: 1;
+  transition: scale 0.5s ease;
+  background-color: var(--popover);
+  color: var(--popover-foreground);
+  max-width: var(--container-width-md);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  @starting-style {
+    scale: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal__btn {
+  position: absolute;
+  top: calc(var(--spacing-4));
+  right: var(--spacing-4);
+  z-index: 1000;
+}
+
+.modal__btn__icon {
+  color: var(--color-black);
 }
 
 .fade-in {

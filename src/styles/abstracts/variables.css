@@ -43,6 +43,7 @@
     --ring: hsl(240, 4.9%, 83.9%);
   }
 
+  --color-black: #000000;
   /* Border radius */
   --radius: 1rem;
   --radius-rounded: 50%;
@@ -50,6 +51,7 @@
 
   --container-width: 80rem;
   --container-width-md: 64rem;
+  --container-width-sm: 40rem;
 
   /* Spacing */
   --spacing-0: 0rem;

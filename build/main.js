@@ -2,19 +2,61 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/app.js":
-/*!********************!*\
-  !*** ./src/app.js ***!
-  \********************/
+/***/ "./src/scripts/main.js":
+/*!*****************************!*\
+  !*** ./src/scripts/main.js ***!
+  \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _scripts_navigation_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scripts/navigation.js */ "./src/scripts/navigation.js");
-/* harmony import */ var _scripts_mouseAnimations_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/mouseAnimations.js */ "./src/scripts/mouseAnimations.js");
+/* harmony import */ var _navigation_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navigation.js */ "./src/scripts/navigation.js");
+/* harmony import */ var _mouseAnimations_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mouseAnimations.js */ "./src/scripts/mouseAnimations.js");
+/* harmony import */ var _modal_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modal.js */ "./src/scripts/modal.js");
 
 
-(0,_scripts_navigation_js__WEBPACK_IMPORTED_MODULE_0__.expandNavigationMenu)();
-(0,_scripts_mouseAnimations_js__WEBPACK_IMPORTED_MODULE_1__.showBlurEffectOnMouse)();
+
+(0,_navigation_js__WEBPACK_IMPORTED_MODULE_0__.expandNavigationMenu)();
+(0,_mouseAnimations_js__WEBPACK_IMPORTED_MODULE_1__.showBlurEffectOnMouse)();
+(0,_modal_js__WEBPACK_IMPORTED_MODULE_2__.initModals)();
+
+/***/ }),
+
+/***/ "./src/scripts/modal.js":
+/*!******************************!*\
+  !*** ./src/scripts/modal.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   initModals: () => (/* binding */ initModals)
+/* harmony export */ });
+function openModal(modalName, src, alt) {
+  var $modal = document.querySelector("dialog[data-modal=".concat(modalName, "]"));
+  fullScreenImageModalContent(src, alt);
+  $modal.showModal();
+  var $closeButton = $modal.querySelector("[data-close]");
+  $closeButton.addEventListener("click", function () {
+    $modal.close();
+  });
+}
+function initModals() {
+  var $triggers = document.querySelectorAll("img[data-trigger]");
+  $triggers.forEach(function ($trigger) {
+    $trigger.addEventListener("click", function () {
+      openModal($trigger.getAttribute("data-trigger"), $trigger.src, $trigger.alt);
+    });
+    $trigger.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        openModal($trigger.getAttribute("data-trigger"));
+      }
+    });
+  });
+}
+function fullScreenImageModalContent(src, alt) {
+  var $modalContent = document.getElementById("modal-content");
+  $modalContent.innerHTML = "<img class=\"img modal-content__img\" src=\"".concat(src, "\" alt=\"").concat(alt, "\">");
+}
 
 /***/ }),
 
@@ -188,7 +230,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/app": 0,
+/******/ 			"/main": 0,
 /******/ 			"main": 0
 /******/ 		};
 /******/ 		
@@ -239,7 +281,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["main"], () => (__webpack_require__("./src/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["main"], () => (__webpack_require__("./src/scripts/main.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["main"], () => (__webpack_require__("./src/styles/main.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
