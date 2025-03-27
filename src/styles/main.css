@@ -19,6 +19,7 @@
 @import "./components/blur.css";
 @import "./components/svg.css";
 @import "./components/modal.css";
+@import "./components/toast.css";
 @import "./animations/fade-in.css";
 @import "./animations/view-transitions.css";
 

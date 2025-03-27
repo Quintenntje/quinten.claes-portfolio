@@ -81,7 +81,7 @@
       </section>
       <div class="grid grid--70-30 grid--top">
         <section class="contact__form">
-          <form class="form" action="/mail">
+          <form class="form" action="">
             <label class="form__group">
               <span class="form__group__label">Name</span>
               <input
@@ -115,13 +115,27 @@
             </label>
 
             <div>
-              <button class="btn btn--primary">Send</button>
+              <button popovertarget="toast" class="btn btn--primary">
+                Send
+              </button>
+
+              <div popover id="toast" class="toast">
+                <div id="toast-content" class="toast__content">
+                  <div id="toast-text" class="toast__text">
+                    <p>Message sent!</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </form>
         </section>
         <section class="contact__details">
           <div>
-            <img class="img--circle" src="./src/images/contact-img.jpg" alt="Picture of Quinten Claes" />
+            <img
+              class="img--circle"
+              src="./src/images/contact-img.jpg"
+              alt="Picture of Quinten Claes"
+            />
           </div>
           <h2 class="heading--small heading--uppercase">Contact details</h2>
           <ul>

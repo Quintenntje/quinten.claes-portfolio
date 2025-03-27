@@ -123,6 +123,7 @@ h2 {
 
   --color-black: #000000;
   --color-white: #ffffff;
+  --success: #4caf50;
   /* Border radius */
   --radius: 1rem;
   --radius-rounded: 50%;
@@ -864,6 +865,37 @@ h2 {
 
 .modal__btn__icon {
   color: var(--color-black);
+}
+
+.toast {
+  background-color: var(--popover);
+  color: var(--popover-foreground);
+  border: 1px solid var(--success);
+  position-anchor: --popover-anchor;
+  bottom: anchor(--popover-anchor top);
+  left: anchor(--popover-anchor right);
+  padding: 1rem;
+  border-radius: var(--radius);
+  z-index: 10000;
+  max-width: 550px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  @starting-style {
+    display: none;
+    transform: translateY(-20px);
+  }
+  &:popover-open {
+    display: block;
+    transform: translateY(0);
+  }
+}
+
+.toast__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
 }
 
 .fade-in {
