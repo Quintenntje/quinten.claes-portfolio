@@ -46,9 +46,9 @@ function initModals() {
     $trigger.addEventListener("click", function () {
       openModal($trigger.getAttribute("data-trigger"), $trigger.src, $trigger.alt);
     });
-    $trigger.addEventListener("keydown", function (e) {
+    $trigger.addEventListener("keypress", function (e) {
       if (e.key === "Enter") {
-        openModal($trigger.getAttribute("data-trigger"));
+        openModal($trigger.getAttribute("data-trigger"), $trigger.src, $trigger.alt);
       }
     });
   });
