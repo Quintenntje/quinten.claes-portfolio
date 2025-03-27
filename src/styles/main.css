@@ -17,6 +17,8 @@
 @import "./layout/timeline.css";
 @import "./components/blur.css";
 @import "./components/svg.css";
+@import "./animations/fade-in.css";
+@import "./animations/view-transitions.css";
 
 body {
   font-family: "Inter", sans-serif;

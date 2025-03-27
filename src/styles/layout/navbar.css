@@ -11,6 +11,8 @@
   backdrop-filter: blur(24px);
   border: 1px solid hsla(var(--border), 0.18);
   z-index: 1000;
+
+  view-transition-name: navbar;
 }
 
 .nav__list {
