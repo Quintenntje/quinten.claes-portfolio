@@ -18,13 +18,6 @@ __webpack_require__.r(__webpack_exports__);
 (0,_navigation_js__WEBPACK_IMPORTED_MODULE_0__.expandNavigationMenu)();
 (0,_mouseAnimations_js__WEBPACK_IMPORTED_MODULE_1__.showBlurEffectOnMouse)();
 (0,_modal_js__WEBPACK_IMPORTED_MODULE_2__.initModals)();
-var form = document.querySelector(".form");
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  var formData = new FormData(form);
-  var data = Object.fromEntries(formData);
-  console.log(data);
-});
 
 /***/ }),
 

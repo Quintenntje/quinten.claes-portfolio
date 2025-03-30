@@ -8,9 +8,7 @@
   font-size: var(--font-size-6xl);
   line-height: 1;
 }
-.heading {
-  margin-bottom: var(--spacing-4);
-}
+
 
 .heading--spacing-big {
   margin: var(--spacing-8) 0;

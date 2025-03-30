@@ -6,15 +6,18 @@
 }
 
 .card--primary {
+  display: grid;
+  grid-template-columns: row;
+  gap: 1rem;
   border: 1px solid var(--border);
   padding: var(--spacing-4);
   background: var(--card);
   color: var(--card-foreground);
 }
 
+
 .card__title {
   font-size: var(--font-size-lg);
-  margin: var(--spacing-2) 0;
 }
 
 .card__title--larger {
