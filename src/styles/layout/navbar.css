@@ -13,6 +13,18 @@
   z-index: 1000;
 
   view-transition-name: navbar;
+  container-type: inline-size;
+
+
+  @container (min-width: 768px) {
+    .nav__icon--mobile-visible {
+      display: none;
+    }
+    .nav__list {
+      position: static;
+      transform: translateX(0);
+    }
+  }
 }
 
 .nav__list {
@@ -114,12 +126,4 @@
   display: none;
 }
 
-@media (min-width: 768px) {
-  .nav__icon--mobile-visible {
-    display: none;
-  }
-  .nav__list {
-    position: static;
-    transform: translateX(0);
-  }
-}
+

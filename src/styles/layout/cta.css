@@ -2,6 +2,7 @@
     width: 100%;
     background-color: var(--muted);
     padding: 2rem;
+    container-type: inline-size;
 }
 .cta__title{
     font-size: var(--font-size-6xl);

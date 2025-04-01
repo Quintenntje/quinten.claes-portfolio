@@ -34,6 +34,7 @@ body {
 
 .main {
   margin: var(--spacing-20) 0;
+  container-type: inline-size;
 }
 
 a {
@@ -49,7 +50,7 @@ ul {
 section {
   margin: var(--spacing-8) 0;
 
-  @media (min-width: 768px) {
+  @container (min-width: 768px) {
     margin: var(--spacing-16) 0;
   }
 }

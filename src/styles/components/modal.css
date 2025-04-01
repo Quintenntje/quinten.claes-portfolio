@@ -6,9 +6,12 @@
   transition: scale 0.5s ease;
   background-color: var(--popover);
   color: var(--popover-foreground);
-  max-width: var(--container-width-md);
+  width: 100%;
+  max-width: var(--container-width);
   border-radius: var(--radius);
   border: 1px solid var(--border);
+
+  container-type: normal;
 
   &::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
@@ -18,7 +21,7 @@
     scale: 0;
   }
 
-  @media screen and (min-width: 1200px) {
+  @container (min-width: 700px) {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);

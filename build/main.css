@@ -195,6 +195,18 @@ h2 {
   z-index: 1000;
 
   view-transition-name: navbar;
+  container-type: inline-size;
+
+
+  @container (min-width: 768px) {
+    .nav__icon--mobile-visible {
+      display: none;
+    }
+    .nav__list {
+      position: static;
+      transform: translateX(0);
+    }
+  }
 }
 
 .nav__list {
@@ -296,20 +308,13 @@ h2 {
   display: none;
 }
 
-@media (min-width: 768px) {
-  .nav__icon--mobile-visible {
-    display: none;
-  }
-  .nav__list {
-    position: static;
-    transform: translateX(0);
-  }
-}
+
 
 .cta{
     width: 100%;
     background-color: var(--muted);
     padding: 2rem;
+    container-type: inline-size;
 }
 .cta__title{
     font-size: var(--font-size-6xl);
@@ -361,7 +366,7 @@ h2 {
   gap: var(--spacing-4);
   margin-top: var(--spacing-4);
 
-  @media screen and (min-width: 500px) {
+  @container (min-width: 500px) {
     flex-direction: row;
   }
 }
@@ -531,8 +536,7 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
-
-@media screen and (min-width: 768px) {
+@container (min-width: 768px) {
   .grid--cols-2 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -542,7 +546,7 @@ h2 {
     gap: 4rem;
   }
 
-  .grid--col-span-2{
+  .grid--col-span-2 {
     grid-column: span 2;
   }
 }
@@ -595,7 +599,7 @@ h2 {
 }
 
 .card--secondary {
-  @media screen and (max-width: 767px) {
+  @container(max-width: 767px) {
     .card__image {
       -webkit-mask-image: linear-gradient(var(--color-black), transparent);
               mask-image: linear-gradient(var(--color-black), transparent);
@@ -624,14 +628,14 @@ h2 {
       color: var(--color-white);
     }
 
-    @media screen and (min-width: 768px) {
+    @container (min-width: 768px) {
       transform: translateY(1rem);
       opacity: 0;
       transition: transform 0.3s, opacity 0.3s;
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @container (min-width: 768px) {
     &:hover .card__content {
       transform: translateY(0);
       opacity: 1;
@@ -823,9 +827,12 @@ h2 {
   transition: scale 0.5s ease;
   background-color: var(--popover);
   color: var(--popover-foreground);
-  max-width: var(--container-width-md);
+  width: 100%;
+  max-width: var(--container-width);
   border-radius: var(--radius);
   border: 1px solid var(--border);
+
+  container-type: normal;
 
   &::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
@@ -835,7 +842,7 @@ h2 {
     scale: 0;
   }
 
-  @media screen and (min-width: 1200px) {
+  @container (min-width: 700px) {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -936,6 +943,7 @@ body {
 
 .main {
   margin: var(--spacing-20) 0;
+  container-type: inline-size;
 }
 
 a {
@@ -951,7 +959,7 @@ ul {
 section {
   margin: var(--spacing-8) 0;
 
-  @media (min-width: 768px) {
+  @container (min-width: 768px) {
     margin: var(--spacing-16) 0;
   }
 }
