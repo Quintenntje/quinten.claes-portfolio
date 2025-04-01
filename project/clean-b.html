@@ -19,7 +19,6 @@
   <body>
     <div aria-hidden="true" id="blur-mouse" class="blur blur-mouse"></div>
     <a href="#main-content" class="skip-to-content">Skip to main content</a>
-
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="nav__logo">
         <a href="index.html">logo</a>
@@ -127,11 +126,13 @@
       <section>
         <div class="grid grid--larger">
           <img
+           
             data-trigger="contact-modal"
             class=""
             src="/src/images/project/clean-b-1.png"
             alt="Clean-B website logo"
             role="button"
+            aria-haspopup="true"
             tabindex="0"
           />
           <img
@@ -140,6 +141,7 @@
             src="/src/images/project/clean-b-2.png"
             alt="Clean-B website roofs section"
             role="button"
+            aria-haspopup="true"
             tabindex="0"
           />
           <img
@@ -148,13 +150,20 @@
             src="/src/images/project/clean-b-3.png"
             alt="Clean-B website services section"
             role="button"
+            aria-haspopup="true"
             tabindex="0"
           />
         </div>
 
-        <dialog class="modal" data-modal="contact-modal">
+        <dialog role="dialog" class="modal" data-modal="contact-modal">
           <div id="modal-content"></div>
-          <button class="btn--transparent modal__btn" data-close aria-label="Close modal">
+          <button
+            aria-labelledby="Submit contact form"
+            arai
+            class="btn--transparent modal__btn"
+            data-close
+            aria-label="Close modal"
+          >
             <i class="icon icon--extra-big modal__btn__icon fas fa-close"></i>
           </button>
         </dialog>

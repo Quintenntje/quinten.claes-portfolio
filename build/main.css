@@ -350,6 +350,11 @@ h2 {
   align-items: center;
 }
 
+.hero__content{
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
 .hero__links {
   display: flex;
   flex-direction: column;
@@ -591,14 +596,11 @@ h2 {
 
 .card--secondary {
   @media screen and (max-width: 767px) {
-
     .card__image {
       -webkit-mask-image: linear-gradient(var(--color-black), transparent);
               mask-image: linear-gradient(var(--color-black), transparent);
     }
   }
-
- 
 
   .card__content {
     position: absolute;
@@ -660,6 +662,7 @@ h2 {
     background: var(--accent);
     color: var(--accent-foreground);
     box-shadow: 0 0 10px var(--primary);
+    transition: all 0.3s;
   }
   .icon-card__icon {
     display: flex;
@@ -864,6 +867,7 @@ h2 {
     display: none;
     transform: translateY(-20px);
   }
+  
   &:popover-open {
     display: block;
     transform: translateY(0);

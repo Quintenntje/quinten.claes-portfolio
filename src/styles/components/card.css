@@ -46,13 +46,10 @@
 
 .card--secondary {
   @media screen and (max-width: 767px) {
-
     .card__image {
       mask-image: linear-gradient(var(--color-black), transparent);
     }
   }
-
- 
 
   .card__content {
     position: absolute;
@@ -113,6 +110,7 @@
     background: var(--accent);
     color: var(--accent-foreground);
     box-shadow: 0 0 10px var(--primary);
+    transition: all 0.3s;
   }
   .icon-card__icon {
     display: flex;
