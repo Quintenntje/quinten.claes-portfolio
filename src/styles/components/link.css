@@ -29,6 +29,11 @@
   margin-top: var(--spacing-8);
 }
 
+.link-logo {
+  font-family: "Hurricane", cursive;
+  font-size: var(--font-size-2xl);
+}
+
 .link--primary {
   color: var(--primary-foreground);
   background-color: var(--primary);

@@ -15,7 +15,6 @@
   view-transition-name: navbar;
   container-type: inline-size;
 
-
   @container (min-width: 768px) {
     .nav__icon--mobile-visible {
       display: none;
@@ -32,6 +31,7 @@
   display: flex;
   gap: var(--spacing-4);
   transform: translateX(-200%);
+  
 }
 
 .nav-list--open {
@@ -125,5 +125,3 @@
 .nav__button--hidden {
   display: none;
 }
-
-

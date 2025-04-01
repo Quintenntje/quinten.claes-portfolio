@@ -197,7 +197,6 @@ h2 {
   view-transition-name: navbar;
   container-type: inline-size;
 
-
   @container (min-width: 768px) {
     .nav__icon--mobile-visible {
       display: none;
@@ -214,6 +213,7 @@ h2 {
   display: flex;
   gap: var(--spacing-4);
   transform: translateX(-200%);
+  
 }
 
 .nav-list--open {
@@ -307,8 +307,6 @@ h2 {
 .nav__button--hidden {
   display: none;
 }
-
-
 
 .cta{
     width: 100%;
@@ -704,6 +702,11 @@ h2 {
 
 .link--spacing-top {
   margin-top: var(--spacing-8);
+}
+
+.link-logo {
+  font-family: "Hurricane", cursive;
+  font-size: var(--font-size-2xl);
 }
 
 .link--primary {
