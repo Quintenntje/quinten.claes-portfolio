@@ -391,7 +391,7 @@ h2 {
   color: var(--primary-foreground);
   background-color: var(--primary);
 
-  &:hover{
+  &:hover, &:focus{
     background-color: var(--primary-foreground);
     color: var(--primary);
   
@@ -404,7 +404,7 @@ h2 {
   background-color: transparent;
   border: 1px solid var(--border);
 
-  &:hover{
+  &:hover &:focus{
     background-color: var(--secondary-foreground);
     color: var(--secondary);
     transition: all 0.3s ease-in-out;
@@ -688,7 +688,8 @@ h2 {
   padding: 0;
   border-radius: 0;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-bottom: 1px solid var(--foreground);
   }
 }
@@ -701,7 +702,8 @@ h2 {
   color: var(--primary-foreground);
   background-color: var(--primary);
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--primary-foreground);
     color: var(--primary);
 
@@ -714,7 +716,8 @@ h2 {
   background-color: transparent;
   border: 1px solid var(--border);
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--secondary-foreground);
     color: var(--secondary);
     transition: all 0.3s ease-in-out;
