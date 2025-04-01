@@ -25,6 +25,10 @@
   padding: var(--spacing-2) var(--spacing-4);
 }
 
+.link--spacing-top {
+  margin-top: var(--spacing-8);
+}
+
 .link--primary {
   color: var(--primary-foreground);
   background-color: var(--primary);
