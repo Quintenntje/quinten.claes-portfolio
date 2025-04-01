@@ -870,25 +870,29 @@ h2 {
 .toast {
   background-color: var(--popover);
   color: var(--popover-foreground);
-  border: 1px solid var(--success);
+  border: 1px solid var(--border);
   position-anchor: --popover-anchor;
   bottom: anchor(--popover-anchor top);
   left: anchor(--popover-anchor right);
   padding: 1rem;
   border-radius: var(--radius);
   z-index: 10000;
-  max-width: 550px;
+  max-width: 320px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
   @starting-style {
     display: none;
     transform: translateY(-20px);
   }
-  
+
   &:popover-open {
     display: block;
     transform: translateY(0);
   }
+}
+
+.toast--success {
+  border: 1px solid var(--success);
 }
 
 .toast__content {
@@ -1007,4 +1011,5 @@ section {
 .skip-to-content:focus {
   top: 0;
 }
+
 

@@ -16,22 +16,22 @@
     <link
       rel="icon"
       type="image/png"
-      href="src/images/favicon/favicon-96x96.png"
+      href="/src/images/favicon/favicon-96x96.png"
       sizes="96x96"
     />
     <link
       rel="icon"
       type="image/svg+xml"
-      href="src/images/favicon/favicon.svg"
+      href="/src/images/favicon/favicon.svg"
     />
-    <link rel="shortcut icon" href="src/images/favicon/favicon.ico" />
+    <link rel="shortcut icon" href="/src/images/favicon/favicon.icon" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="src/images/favicon/apple-touch-icon.png"
+      href="/src/images/favicon/apple-touch-icon.png"
     />
     <meta name="apple-mobile-web-app-title" content="Quinten Claes" />
-    <link rel="manifest" href="src/images/favicon/site.webmanifest" />
+    <link rel="manifest" href="/src/images/favicon/site.webmanifest" />
     <link rel="stylesheet" href="/build/main.css" />
     <title>Quinten Claes</title>
   </head>
@@ -114,36 +114,49 @@
       <section>
         <h3 class="heading heading--large">Website Development Overview</h3>
         <p>
-          This website was built with a focus on
-          <strong>simplicity, performance, and scalability</strong>. Using
-          <strong>basic HTML, CSS, and JavaScript</strong>, the design is
-          <strong>clean, responsive, and optimized</strong> for all devices,
-          ensuring a great user experience.
+          This website was built with a focus on simplicity, performance, and
+          scalability. Using basic HTML, CSS, and JavaScript, the design is
+          clean, responsive, and optimized for all devices, ensuring a great
+          user experience.
         </p>
 
         <h3 class="heading heading--large">Technology Stack & Deployment</h3>
         <p>
-          To <strong>streamline development and deployment</strong>, I utilized
-          <strong>Docker</strong> with <strong>Nginx</strong> as the web server,
-          enabling <strong>efficient containerization</strong> and easy
-          scalability.
+          To streamline development and deployment, I utilized
+          <span class="tooltip-text">
+            Docker
+            <button class="btn--transparent" popovertarget="tooltip">
+              <i class="icon tooltip-icon fa-solid fa-circle-info"></i>
+            </button>
+          </span>
+          with Nginx as the web server, enabling efficient containerization and
+          easy scalability.
         </p>
+        <div role="alertdialog" popover id="tooltip" class="toast">
+          <div id="toast-content" class="toast__content">
+            <div id="toast-text" class="toast__text">
+              <p>
+                Docker helps developers build, share, run, and verify
+                applications anywhere — without tedious environment
+                configuration or management.
+              </p>
+            </div>
+          </div>
+        </div>
         <p>
-          Additionally, I integrated <strong>Jenkins</strong> for
-          <strong>continuous integration and delivery (CI/CD)</strong>, ensuring
-          that updates are automatically tested and deployed. This guarantees
-          <strong>fast, reliable, and hassle-free deployments</strong> while
-          maintaining high-quality standards.
+          Additionally, I integrated Jenkins for continuous integration and
+          delivery (CI/CD), ensuring that updates are automatically tested and
+          deployed. This guarantees fast, reliable, and hassle-free deployments
+          while maintaining high-quality standards.
         </p>
 
         <h3 class="heading heading--large">
           Future Enhancements: Contact Form
         </h3>
         <p>
-          I plan to add a <strong>contact form using PHP</strong>, allowing
-          visitors to <strong>easily reach out</strong>. This form will be
-          securely processed, efficiently handle user inquiries, and integrate
-          seamlessly with the website.
+          I plan to add a contact form using PHP, allowing visitors to easily
+          reach out. This form will be securely processed, efficiently handle
+          user inquiries, and integrate seamlessly with the website.
         </p>
       </section>
 
