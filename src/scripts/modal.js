@@ -1,4 +1,4 @@
-function openModal(modalName, src , alt) {
+function openModal(modalName, src, alt) {
   const $modal = document.querySelector(`dialog[data-modal=${modalName}]`);
 
   fullScreenImageModalContent(src, alt);
@@ -16,23 +16,27 @@ export function initModals() {
 
   $triggers.forEach(($trigger) => {
     $trigger.addEventListener("click", () => {
-      openModal($trigger.getAttribute("data-trigger"), $trigger.src , $trigger.alt);
+      openModal(
+        $trigger.getAttribute("data-trigger"),
+        $trigger.src,
+        $trigger.alt
+      );
     });
 
     $trigger.addEventListener("keypress", (e) => {
-      if (e.key === "Enter") {
-        openModal($trigger.getAttribute("data-trigger"), $trigger.src , $trigger.alt);
+      if (e.key === "Enter" || e.key === " ") {
+        openModal(
+          $trigger.getAttribute("data-trigger"),
+          $trigger.src,
+          $trigger.alt
+        );
       }
     });
   });
 }
 
 function fullScreenImageModalContent(src, alt) {
-
-  
   const $modalContent = document.getElementById("modal-content");
 
   $modalContent.innerHTML = `<img class="img modal-content__img" src="${src}" alt="${alt}">`;
-
 }
-
