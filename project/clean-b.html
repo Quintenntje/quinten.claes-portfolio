@@ -125,14 +125,19 @@
           To streamline development and deployment, I utilized
           <span class="tooltip-text">
             Docker
-            <button class="btn--transparent" popovertarget="tooltip">
+            <button
+              aria-label="More information about Docker"
+              aria-haspopup="true"
+              class="btn--transparent"
+              popovertarget="tooltip"
+            >
               <i class="icon tooltip-icon fa-solid fa-circle-info"></i>
             </button>
           </span>
           with Nginx as the web server, enabling efficient containerization and
           easy scalability.
         </p>
-        <div role="alertdialog" popover id="tooltip" class="toast">
+        <div role="alertdialog" popover id="tooltip" class="toast toast--tooltip">
           <div id="toast-content" class="toast__content">
             <div id="toast-text" class="toast__text">
               <p>

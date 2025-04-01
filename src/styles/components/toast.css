@@ -26,6 +26,19 @@
   border: 1px solid var(--success);
 }
 
+.toast--tooltip {
+  opacity: 1;
+  transition: opacity 0.5s;
+
+  @starting-style {
+    opacity: 0;
+  }
+
+  &:popover-open {
+    transition: opacity 0.5s;
+  }
+}
+
 .toast__content {
   display: flex;
   justify-content: space-between;
