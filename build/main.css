@@ -66,6 +66,7 @@ h2 {
   font-size: var(--font-size-2xl);
 }
 
+
 @media screen and (max-width: 340px){
   h1 {
     font-size: var(--font-size-4xl);
@@ -188,6 +189,7 @@ h2 {
     display: flex;
     align-content: center;
     justify-content: center;
+    height: 5rem;
 }
 .nav {
   height: 80px;
@@ -505,6 +507,10 @@ h2 {
 .text--bigger{
     font-size: 1.25em; 
 }
+
+.text--spacing-bottom{
+    margin-bottom: var(--spacing-4);
+}
 .icon {
   color: var(--foreground);
   font-size: var(--font-size-base);
@@ -719,7 +725,7 @@ h2 {
   margin-top: var(--spacing-8);
 }
 
-.link-logo {
+.link--logo {
   font-family: "Hurricane", cursive;
   font-size: var(--font-size-2xl);
 }

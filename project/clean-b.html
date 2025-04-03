@@ -40,7 +40,7 @@
     <a href="#main-content" class="skip-to-content">Skip to main content</a>
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="nav__logo">
-        <a class="link-logo" href="/index.html">Quinten Claes</a>
+        <a class="link--logo" href="/index.html">Quinten Claes</a>
       </div>
       <ul id="nav-list" class="nav__list">
         <li class="nav__list-item">
@@ -113,7 +113,7 @@
 
       <section>
         <h3 class="heading heading--large">Website Development Overview</h3>
-        <p>
+        <p class="text text--spacing-bottom">
           This website was built with a focus on simplicity, performance, and
           scalability. Using basic HTML, CSS, and JavaScript, the design is
           clean, responsive, and optimized for all devices, ensuring a great
@@ -121,7 +121,7 @@
         </p>
 
         <h3 class="heading heading--large">Technology Stack & Deployment</h3>
-        <p>
+        <p class="text text--spacing-bottom">
           To streamline development and deployment, I utilized
           <span class="tooltip-text">
             Docker
@@ -137,7 +137,12 @@
           with Nginx as the web server, enabling efficient containerization and
           easy scalability.
         </p>
-        <div role="alertdialog" popover id="tooltip" class="toast toast--tooltip">
+        <div
+          role="alertdialog"
+          popover
+          id="tooltip"
+          class="toast toast--tooltip"
+        >
           <div id="toast-content" class="toast__content">
             <div id="toast-text" class="toast__text">
               <p>
@@ -206,6 +211,70 @@
             <i class="icon icon--extra-big modal__btn__icon fas fa-close"></i>
           </button>
         </dialog>
+      </section>
+
+      <section>
+        <h2 class="heading heading--spacing-big page_heading__subtitleg">See more of my work</h2>
+        <div>
+          <ul class="grid grid--larger">
+            <li>
+              <article class="card card--secondary">
+                <img
+                  class="img card__image"
+                  src="/src/images/project/homepage.png"
+                  alt="Cooking Masters"
+                />
+
+                <div class="card__content">
+                  <h3 class="card__title">Cooking Masters</h3>
+                  <span class="card__tag">School</span>
+                </div>
+                <a
+                  class="card__link--full"
+                  href="http://portfolio.ddev.site/projects/cooking-masters"
+                  ><span class="sr-only">Cooking Masters</span></a
+                >
+              </article>
+            </li>
+            <li>
+              <article class="card card--secondary">
+                <img
+                  class="img card__image"
+                  src="/src/images/project/homepage.png"
+                  alt="Cooking Masters"
+                />
+
+                <div class="card__content">
+                  <h3 class="card__title">Cooking Masters</h3>
+                  <span class="card__tag">School</span>
+                </div>
+                <a
+                  class="card__link--full"
+                  href="http://portfolio.ddev.site/projects/cooking-masters"
+                  ><span class="sr-only">Cooking Masters</span></a
+                >
+              </article>
+            </li>
+
+            <li>
+              <article class="card card--secondary">
+                <img
+                  class="img card__image"
+                  src="/src/images/project/clean-b.png"
+                  alt="Clean-B"
+                />
+
+                <div class="card__content">
+                  <h3 class="card__title">Clean-B</h3>
+                  <span class="card__tag">Website</span>
+                </div>
+                <a class="card__link--full" href="/project/clean-b.html"
+                  ><span class="sr-only">Clean-B</span></a
+                >
+              </article>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
 

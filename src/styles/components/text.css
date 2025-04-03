@@ -5,3 +5,7 @@
 .text--bigger{
     font-size: 1.25em; 
 }
+
+.text--spacing-bottom{
+    margin-bottom: var(--spacing-4);
+}
