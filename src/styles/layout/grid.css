@@ -14,7 +14,11 @@
 }
 
 .grid--larger {
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  @container (min-width: 1200px) {
+    grid-template-columns: repeat(3,1fr);
+  }
 }
 
 @container (min-width: 768px) {

@@ -6,6 +6,16 @@ h2 {
   font-size: var(--font-size-2xl);
 }
 
+@media screen and (max-width: 340px){
+  h1 {
+    font-size: var(--font-size-4xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-xl);
+  }
+}
+
 @media screen and (min-width: 768px) {
   h1 {
     font-size: var(--font-size-6xl);
