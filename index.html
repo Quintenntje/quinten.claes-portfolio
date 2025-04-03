@@ -42,7 +42,9 @@
   </head>
   <body>
     <div aria-hidden="true" id="blur-mouse" class="blur blur-mouse"></div>
-    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    <a href="#main-content" class="skip-to-content" aria-current="page"
+      >Skip to main content</a
+    >
 
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="nav__logo">
@@ -72,7 +74,7 @@
             >Contact</a
           >
         </li>
-      </dial>
+      </ul>
       <div class="nav__icon--mobile-visible">
         <button
           id="open-nav"
@@ -172,8 +174,8 @@
             </h3>
             <p>These are the programming languages I use for development.</p>
 
-            <div class="icon-cards">
-              <div class="card icon-card">
+            <ul class="icon-cards">
+              <li class="card icon-card">
                 <div class="icon-card__icon">
                   <svg
                     class="svg"
@@ -192,9 +194,9 @@
                   rel="noopener noreferrer"
                   ><span class="sr-only">More info about HTML</span></a
                 >
-              </div>
+              </li>
 
-              <div class="card icon-card">
+              <li class="card icon-card">
                 <div class="icon-card__icon">
                   <svg
                     class="svg"
@@ -213,9 +215,9 @@
                   rel="noopener noreferrer"
                   ><span class="sr-only">More info about css</span></a
                 >
-              </div>
+              </li>
 
-              <div class="card icon-card">
+              <li class="card icon-card">
                 <div class="icon-card__icon">
                   <svg
                     class="svg"
@@ -234,8 +236,8 @@
                   rel="noopener noreferrer"
                   ><span class="sr-only">More info about javascript</span></a
                 >
-              </div>
-              <div class="card icon-card">
+              </li>
+              <li class="card icon-card">
                 <div class="icon-card__icon">
                   <svg
                     class="svg"
@@ -254,9 +256,9 @@
                   rel="noopener noreferrer"
                   ><span class="sr-only">More info about php</span></a
                 >
-              </div>
+              </li>
 
-              <div class="card icon-card">
+              <li class="card icon-card">
                 <div class="icon-card__icon">
                   <svg
                     class="svg"
@@ -276,7 +278,7 @@
                   ><span class="sr-only">More info about mysql</span></a
                 >
               </div>
-            </div>
+            </ul>
           </div>
         </div>
       </section>

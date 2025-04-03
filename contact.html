@@ -100,7 +100,7 @@
       </section>
       <div class="grid grid--70-30 grid--top">
         <section class="contact__form">
-          <form class="form" action="">
+          <form id="contact-form" class="form" action="">
             <label class="form__group">
               <span class="form__group__label">Name</span>
               <input
@@ -135,7 +135,7 @@
 
             <div>
               <button
-                aria-labelledby="Submit contact form"
+                aria-label="Send message"
                 type="submit"
                 popovertarget="toast"
                 class="btn btn--primary"
@@ -143,7 +143,12 @@
                 Send
               </button>
 
-              <div role="alertdialog" popover id="toast" class="toast toast--success">
+              <div
+                role="alertdialog"
+                popover
+                id="toast"
+                class="toast toast--success"
+              >
                 <div id="toast-content" class="toast__content">
                   <div id="toast-text" class="toast__text">
                     <p>Message sent!</p>
