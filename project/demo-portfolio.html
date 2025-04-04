@@ -89,119 +89,84 @@
 
     <main id="main-content" class="main container container--md">
       <section class="page-heading">
-        <h1 class="page_heading__title">Clean-B</h1>
-        <h2 class="page_heading__subtitle">Website</h2>
+        <h1 class="page_heading__title">Demo portfolio</h1>
+        <h2 class="page_heading__subtitle">School</h2>
       </section>
       <section class="grid grid--cols-2 grid--left">
         <div>
-          <h3>Client</h3>
-          <p>Lander Baert</p>
-        </div>
-        <div>
-          <h3>Live project</h3>
+          <i
+            class="icon icon--big icon--spacing-right fa-solid fa-up-right-from-square"
+          ></i>
           <a
-            href="https://www.clean-b.be/"
+            class="link link--transparent"
+            href="https://github.com/pgm-2425-web-2/opdracht-2-portfolio-Quintenntje"
             target="_blank"
             rel="noopener noreferrer"
-            class="link link--transparent"
+            >Visit the website</a
           >
-            <i class="icon fas fa-up-right-from-square"></i>
-            <span>Visit the website</span>
-          </a>
         </div>
       </section>
 
       <section>
-        <h3 class="heading heading--large">Website Development Overview</h3>
         <p class="text text--spacing-bottom">
-          This website was built with a focus on simplicity, performance, and
-          scalability. Using basic HTML, CSS, and JavaScript, the design is
-          clean, responsive, and optimized for all devices, ensuring a great
-          user experience.
+          The Demo Portfolio is a school project designed to showcase creative
+          web design skills using HTML and CSS. This portfolio features smooth
+          animations, engaging transitions, and visually appealing layouts ,
+          demonstrating the power of CSS animations in modern web design.
         </p>
-
-        <h3 class="heading heading--large">Technology Stack & Deployment</h3>
         <p class="text text--spacing-bottom">
-          To streamline development and deployment, I utilized
-          <span class="tooltip-text">
-            Docker
-            <button
-              aria-label="More information about Docker"
-              aria-haspopup="true"
-              class="btn--transparent"
-              popovertarget="tooltip"
-            >
-              <i class="icon tooltip-icon fa-solid fa-circle-info"></i>
-            </button>
-          </span>
-          with Nginx as the web server, enabling efficient containerization and
-          easy scalability.
+          As part of the project, the portfolio highlights different sections
+          with dynamic motion effects, making the browsing experience more
+          interactive and visually striking. The goal was to experiment with
+          hover effects, keyframe animations, and responsive design , ensuring a
+          polished and professional presentation.
         </p>
-        <div
-          role="alertdialog"
-          popover
-          id="tooltip"
-          class="toast toast--tooltip"
-        >
-          <div id="toast-content" class="toast__content">
-            <div id="toast-text" class="toast__text">
-              <p>
-                Docker helps developers build, share, run, and verify
-                applications anywhere — without tedious environment
-                configuration or management.
-              </p>
-            </div>
-          </div>
-        </div>
-        <p>
-          Additionally, I integrated Jenkins for continuous integration and
-          delivery (CI/CD), ensuring that updates are automatically tested and
-          deployed. This guarantees fast, reliable, and hassle-free deployments
-          while maintaining high-quality standards.
-        </p>
-
-        <h3 class="heading heading--large">
-          Future Enhancements: Contact Form
-        </h3>
-        <p>
-          I plan to add a contact form using PHP, allowing visitors to easily
-          reach out. This form will be securely processed, efficiently handle
-          user inquiries, and integrate seamlessly with the website.
+        <p class="text text--spacing-bottom">
+          This project not only demonstrates technical proficiency in front-end
+          development but also serves as a creative expression of design and
+          animation skills.
         </p>
       </section>
-
       <section>
         <div class="grid grid--larger">
           <img
+            class="img"
             data-trigger="contact-modal"
-            class="img project-img"
-            src="/src/images/project/clean-b-1.png"
-            alt="Clean-B website logo"
             role="button"
-            aria-haspopup="true"
             tabindex="0"
+            aria-haspopup="true"
+            src="http://portfolio.ddev.site/assets/media/_fullscreen/550/Schermafbeelding-2025-04-03-232050.webp"
+            alt="Demo portfolio introduction section"
           />
           <img
+            class="img"
             data-trigger="contact-modal"
-            class="img project-img"
-            src="/src/images/project/clean-b-2.png"
-            alt="Clean-B website roofs section"
             role="button"
-            aria-haspopup="true"
             tabindex="0"
+            aria-haspopup="true"
+            src="http://portfolio.ddev.site/assets/media/_fullscreen/551/Schermafbeelding-2025-04-03-232058.webp"
+            alt="Demo portfolio about me section"
           />
           <img
+            class="img"
             data-trigger="contact-modal"
-            class="img project-img"
-            src="/src/images/project/clean-b-3.png"
-            alt="Clean-B website services section"
             role="button"
-            aria-haspopup="true"
             tabindex="0"
+            aria-haspopup="true"
+            src="http://portfolio.ddev.site/assets/media/_fullscreen/552/Schermafbeelding-2025-04-03-232108.webp"
+            alt="Demo portfolio projects section"
+          />
+          <img
+            class="img"
+            data-trigger="contact-modal"
+            role="button"
+            tabindex="0"
+            aria-haspopup="true"
+            src="http://portfolio.ddev.site/assets/media/_fullscreen/553/Schermafbeelding-2025-04-03-232122.webp"
+            alt="Demo portfolio contact form"
           />
         </div>
-
-        <dialog role="dialog" class="modal" data-modal="contact-modal">
+        <dialog class="modal" data-modal="contact-modal">
           <div id="modal-content"></div>
           <button
             class="btn--transparent modal__btn"
@@ -214,62 +179,65 @@
       </section>
 
       <section>
-        <h2 class="heading heading--spacing-big page_heading__subtitle">See more of my work</h2>
+        <h2 class="heading heading--spacing-big page_heading__subtitle">
+          See more of my work
+        </h2>
         <div>
           <ul class="grid grid--larger">
             <li>
               <article class="card card--secondary">
                 <img
                   class="img card__image"
-                  src="/src/images/project/homepage.png"
-                  alt="Cooking Masters"
-                />
-
-                <div class="card__content">
-                  <h3 class="card__title">Cooking Masters</h3>
-                  <span class="card__tag">School</span>
-                </div>
-                <a
-                  class="card__link--full"
-                  href="http://portfolio.ddev.site/projects/cooking-masters"
-                  ><span class="sr-only">Cooking Masters</span></a
-                >
-              </article>
-            </li>
-            <li>
-              <article class="card card--secondary">
-                <img
-                  class="img card__image"
-                  src="/src/images/project/homepage.png"
-                  alt="Cooking Masters"
-                />
-
-                <div class="card__content">
-                  <h3 class="card__title">Cooking Masters</h3>
-                  <span class="card__tag">School</span>
-                </div>
-                <a
-                  class="card__link--full"
-                  href="http://portfolio.ddev.site/projects/cooking-masters"
-                  ><span class="sr-only">Cooking Masters</span></a
-                >
-              </article>
-            </li>
-
-            <li>
-              <article class="card card--secondary">
-                <img
-                  class="img card__image"
-                  src="/src/images/project/clean-b.png"
+                  src="/src/images/project/clean-b-1.png"
                   alt="Clean-B"
                 />
-
                 <div class="card__content">
                   <h3 class="card__title">Clean-B</h3>
                   <span class="card__tag">Website</span>
                 </div>
-                <a class="card__link--full" href="/project/clean-b.html"
+                <a
+                  class="card__link--full"
+                  href="/project/clean-b.html"
+                  target="_self"
                   ><span class="sr-only">Clean-B</span></a
+                >
+              </article>
+            </li>
+            <li>
+              <article class="card card--secondary">
+                <img
+                  class="img card__image"
+                  src="http://portfolio.ddev.site/assets/media/_card/541/Schermafbeelding-2025-04-03-231100.webp"
+                  alt="Gamescon"
+                />
+                <div class="card__content">
+                  <h3 class="card__title">Gamescon</h3>
+                  <span class="card__tag">School</span>
+                </div>
+                <a
+                  class="card__link--full"
+                  href="http://portfolio.ddev.site/projects/gamescon"
+                  target="_self"
+                  ><span class="sr-only">Gamescon</span></a
+                >
+              </article>
+            </li>
+            <li>
+              <article class="card card--secondary">
+                <img
+                  class="img card__image"
+                  src="http://portfolio.ddev.site/assets/media/_card/525/Schermafbeelding-2025-04-03-225102.webp"
+                  alt="The best of 2024"
+                />
+                <div class="card__content">
+                  <h3 class="card__title">The best of 2024</h3>
+                  <span class="card__tag">School</span>
+                </div>
+                <a
+                  class="card__link--full"
+                  href="http://portfolio.ddev.site/projects/the-best-of-2024"
+                  target="_self"
+                  ><span class="sr-only">The best of 2024</span></a
                 >
               </article>
             </li>

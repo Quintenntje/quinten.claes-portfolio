@@ -33,7 +33,7 @@
     <meta name="apple-mobile-web-app-title" content="Quinten Claes" />
     <link rel="manifest" href="/src/images/favicon/site.webmanifest" />
     <link rel="stylesheet" href="/build/main.css" />
-    <title>Quinten Claes | clean-b</title>
+    <title>Quinten Claes | Make it happen</title>
   </head>
   <body>
     <div aria-hidden="true" id="blur-mouse" class="blur blur-mouse"></div>
@@ -89,44 +89,39 @@
 
     <main id="main-content" class="main container container--md">
       <section class="page-heading">
-        <h1 class="page_heading__title">Clean-B</h1>
-        <h2 class="page_heading__subtitle">Website</h2>
+        <h1 class="page_heading__title">Make It happen</h1>
+        <h2 class="page_heading__subtitle">School</h2>
       </section>
       <section class="grid grid--cols-2 grid--left">
         <div>
-          <h3>Client</h3>
-          <p>Lander Baert</p>
-        </div>
-        <div>
-          <h3>Live project</h3>
+          <i
+            class="icon icon--big icon--spacing-right fa-solid fa-up-right-from-square"
+          ></i>
           <a
-            href="https://www.clean-b.be/"
+            class="link link--transparent"
+            href="https://github.com/pgmgent-pgm-3/make-it-happen-Quintenntje"
             target="_blank"
             rel="noopener noreferrer"
-            class="link link--transparent"
+            >Visit the website</a
           >
-            <i class="icon fas fa-up-right-from-square"></i>
-            <span>Visit the website</span>
-          </a>
         </div>
       </section>
 
       <section>
-        <h3 class="heading heading--large">Website Development Overview</h3>
         <p class="text text--spacing-bottom">
-          This website was built with a focus on simplicity, performance, and
-          scalability. Using basic HTML, CSS, and JavaScript, the design is
-          clean, responsive, and optimized for all devices, ensuring a great
-          user experience.
+          MakeItHappen is a task management web application designed to help
+          users stay organized and productive. Built using HTML, CSS, and
+          JavaScript, the app features a clean and responsive interface, making
+          it easy to add, update, and delete tasks.
         </p>
-
-        <h3 class="heading heading--large">Technology Stack & Deployment</h3>
         <p class="text text--spacing-bottom">
-          To streamline development and deployment, I utilized
+          The app includes secure user authentication with login and
+          registration features, ensuring that each user's tasks are kept
+          private. Backend functionality is powered by
           <span class="tooltip-text">
-            Docker
+            Knex.js
             <button
-              aria-label="More information about Docker"
+              aria-label="More information about Knex"
               aria-haspopup="true"
               class="btn--transparent"
               popovertarget="tooltip"
@@ -134,8 +129,8 @@
               <i class="icon tooltip-icon fa-solid fa-circle-info"></i>
             </button>
           </span>
-          with Nginx as the web server, enabling efficient containerization and
-          easy scalability.
+          lowing for efficient interaction with the database to store and
+          retrieve user data and tasks.
         </p>
         <div
           role="alertdialog"
@@ -146,62 +141,52 @@
           <div id="toast-content" class="toast__content">
             <div id="toast-text" class="toast__text">
               <p>
-                Docker helps developers build, share, run, and verify
-                applications anywhere — without tedious environment
-                configuration or management.
+                Knex.js is a "batteries included" SQL
+                query builder for PostgreSQL, CockroachDB, MSSQL, MySQL,
+                MariaDB, SQLite3, Better-SQLite3, Oracle, and Amazon Redshift
+                designed to be flexible, portable, and fun to use.
               </p>
             </div>
           </div>
         </div>
-        <p>
-          Additionally, I integrated Jenkins for continuous integration and
-          delivery (CI/CD), ensuring that updates are automatically tested and
-          deployed. This guarantees fast, reliable, and hassle-free deployments
-          while maintaining high-quality standards.
-        </p>
-
-        <h3 class="heading heading--large">
-          Future Enhancements: Contact Form
-        </h3>
-        <p>
-          I plan to add a contact form using PHP, allowing visitors to easily
-          reach out. This form will be securely processed, efficiently handle
-          user inquiries, and integrate seamlessly with the website.
+        <p class="text text--spacing-bottom">
+          With the implementation of Express.js, MakeItHappen ensures fast,
+          secure, and scalable handling of requests. Whether you're managing a
+          to-do list for work, school, or personal projects, MakeItHappen is the
+          ideal tool to keep you on track and organized.
         </p>
       </section>
-
       <section>
         <div class="grid grid--larger">
           <img
+            class="img"
             data-trigger="contact-modal"
-            class="img project-img"
-            src="/src/images/project/clean-b-1.png"
-            alt="Clean-B website logo"
             role="button"
-            aria-haspopup="true"
             tabindex="0"
+            aria-haspopup="true"
+            src="/src/images/project/make-it-happen-3.png"
+            alt="Make IT happen homepage"
           />
           <img
+            class="img"
             data-trigger="contact-modal"
-            class="img project-img"
-            src="/src/images/project/clean-b-2.png"
-            alt="Clean-B website roofs section"
             role="button"
-            aria-haspopup="true"
             tabindex="0"
+            aria-haspopup="true"
+            src="/src/images/project/make-it-happen-1.png"
+            alt="Make it happen register page"
           />
           <img
+            class="img"
             data-trigger="contact-modal"
-            class="img project-img"
-            src="/src/images/project/clean-b-3.png"
-            alt="Clean-B website services section"
             role="button"
-            aria-haspopup="true"
             tabindex="0"
+            aria-haspopup="true"
+            src="/src/images/project/make-it-happen-2.png"
+            alt="Make IT happen loginpage"
           />
         </div>
-
-        <dialog role="dialog" class="modal" data-modal="contact-modal">
+        <dialog class="modal" data-modal="contact-modal">
           <div id="modal-content"></div>
           <button
             class="btn--transparent modal__btn"
@@ -214,17 +199,18 @@
       </section>
 
       <section>
-        <h2 class="heading heading--spacing-big page_heading__subtitle">See more of my work</h2>
+        <h2 class="heading heading--spacing-big page_heading__subtitle">
+          See more of my work
+        </h2>
         <div>
           <ul class="grid grid--larger">
             <li>
               <article class="card card--secondary">
                 <img
                   class="img card__image"
-                  src="/src/images/project/homepage.png"
+                  src="http://portfolio.ddev.site/assets/media/_card/74/homepage.webp"
                   alt="Cooking Masters"
                 />
-
                 <div class="card__content">
                   <h3 class="card__title">Cooking Masters</h3>
                   <span class="card__tag">School</span>
@@ -232,6 +218,7 @@
                 <a
                   class="card__link--full"
                   href="http://portfolio.ddev.site/projects/cooking-masters"
+                  target="_self"
                   ><span class="sr-only">Cooking Masters</span></a
                 >
               </article>
@@ -240,36 +227,37 @@
               <article class="card card--secondary">
                 <img
                   class="img card__image"
-                  src="/src/images/project/homepage.png"
-                  alt="Cooking Masters"
+                  src="/src/images/project/demo-portfolio-1.png"
+                  alt="Demo portfolio"
                 />
-
                 <div class="card__content">
-                  <h3 class="card__title">Cooking Masters</h3>
+                  <h3 class="card__title">Demo portfolio</h3>
                   <span class="card__tag">School</span>
                 </div>
                 <a
                   class="card__link--full"
-                  href="http://portfolio.ddev.site/projects/cooking-masters"
-                  ><span class="sr-only">Cooking Masters</span></a
+                  href="/project/demo-portfolio.html"
+                  target="_self"
+                  ><span class="sr-only">Demo portfolio</span></a
                 >
               </article>
             </li>
-
             <li>
               <article class="card card--secondary">
                 <img
                   class="img card__image"
-                  src="/src/images/project/clean-b.png"
-                  alt="Clean-B"
+                  src="http://portfolio.ddev.site/assets/media/_card/541/Schermafbeelding-2025-04-03-231100.webp"
+                  alt="Gamescon"
                 />
-
                 <div class="card__content">
-                  <h3 class="card__title">Clean-B</h3>
-                  <span class="card__tag">Website</span>
+                  <h3 class="card__title">Gamescon</h3>
+                  <span class="card__tag">School</span>
                 </div>
-                <a class="card__link--full" href="/project/clean-b.html"
-                  ><span class="sr-only">Clean-B</span></a
+                <a
+                  class="card__link--full"
+                  href="http://portfolio.ddev.site/projects/gamescon"
+                  target="_self"
+                  ><span class="sr-only">Gamescon</span></a
                 >
               </article>
             </li>
