@@ -33,7 +33,7 @@
     <meta name="apple-mobile-web-app-title" content="Quinten Claes" />
     <link rel="manifest" href="/src/images/favicon/site.webmanifest" />
     <link rel="stylesheet" href="/build/main.css" />
-    <title>Quinten Claes | clean-b</title>
+    <title>Quinten Claes | Best of 2024</title>
   </head>
   <body>
     <div aria-hidden="true" id="blur-mouse" class="blur blur-mouse"></div>
@@ -89,119 +89,95 @@
 
     <main id="main-content" class="main container container--md">
       <section class="page-heading">
-        <h1 class="page_heading__title">Clean-B</h1>
-        <h2 class="page_heading__subtitle">Website</h2>
+        <h1 class="page_heading__title">The best of 2024</h1>
+        <h2 class="page_heading__subtitle">School</h2>
       </section>
       <section class="grid grid--cols-2 grid--left">
         <div>
-          <h3>Client</h3>
-          <p>Lander Baert</p>
-        </div>
-        <div>
-          <h3>Live project</h3>
+          <i
+            class="icon icon--big icon--spacing-right fa-solid fa-up-right-from-square"
+          ></i>
           <a
-            href="https://www.clean-b.be/"
+            class="link link--transparent"
+            href="https://pgm-2425-atwork-1.github.io/project-2-Quintenntje/index.html"
             target="_blank"
             rel="noopener noreferrer"
-            class="link link--transparent"
+            >Visit the website</a
           >
-            <i class="icon fas fa-up-right-from-square"></i>
-            <span>Visit the website</span>
-          </a>
         </div>
       </section>
 
       <section>
-        <h3 class="heading heading--large">Website Development Overview</h3>
         <p class="text text--spacing-bottom">
-          This website was built with a focus on simplicity, performance, and
-          scalability. Using basic HTML, CSS, and JavaScript, the design is
-          clean, responsive, and optimized for all devices, ensuring a great
-          user experience.
+          Best of 2024 is a web application showcasing the top games, movies, TV
+          series, albums, and songs of the year. Designed with HTML, CSS, and
+          JavaScript, the site provides an engaging and visually appealing way
+          to explore the best entertainment choices, all dynamically fetched
+          using JavaScript.
         </p>
-
-        <h3 class="heading heading--large">Technology Stack & Deployment</h3>
         <p class="text text--spacing-bottom">
-          To streamline development and deployment, I utilized
-          <span class="tooltip-text">
-            Docker
-            <button
-              aria-label="More information about Docker"
-              aria-haspopup="true"
-              class="btn--transparent"
-              popovertarget="tooltip"
-            >
-              <i class="icon tooltip-icon fa-solid fa-circle-info"></i>
-            </button>
-          </span>
-          with Nginx as the web server, enabling efficient containerization and
-          easy scalability.
+          With a sleek and responsive interface, users can effortlessly browse
+          >critically acclaimed titles, fan-favorite releases, and chart-topping
+          hits . The app utilizes real-time data fetching to ensure that the
+          rankings stay up-to-date, delivering a seamless and interactive
+          experience.
         </p>
-        <div
-          role="alertdialog"
-          popover
-          id="tooltip"
-          class="toast toast--tooltip"
-        >
-          <div id="toast-content" class="toast__content">
-            <div id="toast-text" class="toast__text">
-              <p>
-                Docker helps developers build, share, run, and verify
-                applications anywhere — without tedious environment
-                configuration or management.
-              </p>
-            </div>
-          </div>
-        </div>
-        <p>
-          Additionally, I integrated Jenkins for continuous integration and
-          delivery (CI/CD), ensuring that updates are automatically tested and
-          deployed. This guarantees fast, reliable, and hassle-free deployments
-          while maintaining high-quality standards.
-        </p>
-
-        <h3 class="heading heading--large">
-          Future Enhancements: Contact Form
-        </h3>
-        <p>
-          I plan to add a contact form using PHP, allowing visitors to easily
-          reach out. This form will be securely processed, efficiently handle
-          user inquiries, and integrate seamlessly with the website.
+        <p class="text text--spacing-bottom">
+          Whether you're looking for the must-watch movies, the best new music
+          albums, or the hottest video games of 2024, this platform has you
+          covered. Stay updated with the latest trends and explore the ultimate
+          entertainment guide of the year!
         </p>
       </section>
-
       <section>
         <div class="grid grid--larger">
           <img
+            class="img"
             data-trigger="contact-modal"
-            class="img project-img"
-            src="/src/images/project/clean-b-1.png"
-            alt="Clean-B website logo"
             role="button"
-            aria-haspopup="true"
             tabindex="0"
+            aria-haspopup="true"
+            src="/src/images/project/best-of-2024-homepage.png"
+            alt="Best of 2024 Homepage"
           />
           <img
+            class="img"
             data-trigger="contact-modal"
-            class="img project-img"
-            src="/src/images/project/clean-b-2.png"
-            alt="Clean-B website roofs section"
             role="button"
-            aria-haspopup="true"
             tabindex="0"
+            aria-haspopup="true"
+            src="/src/images/project/best-of-2024-albums.png"
+            alt="Best of 2024 Albums"
           />
           <img
+            class="img"
             data-trigger="contact-modal"
-            class="img project-img"
-            src="/src/images/project/clean-b-3.png"
-            alt="Clean-B website services section"
             role="button"
-            aria-haspopup="true"
             tabindex="0"
+            aria-haspopup="true"
+            src="/src/images/project/best-of-2024-movies.png"
+            alt="Best of 2024 Movies page"
+          />
+          <img
+            class="img"
+            data-trigger="contact-modal"
+            role="button"
+            tabindex="0"
+            aria-haspopup="true"
+            src="/src/images/project/best-of-2024-games.png"
+            alt="Best of 2024 Games"
+          />
+          <img
+            class="img"
+            data-trigger="contact-modal"
+            role="button"
+            tabindex="0"
+            aria-haspopup="true"
+            src="/src/images/project/best-of-2024-songs.png"
+            alt="Best of 2024 Top 100 songs"
           />
         </div>
-
-        <dialog role="dialog" class="modal" data-modal="contact-modal">
+        <dialog class="modal" data-modal="contact-modal">
           <div id="modal-content"></div>
           <button
             class="btn--transparent modal__btn"
@@ -223,16 +199,37 @@
               <article class="card card--secondary">
                 <img
                   class="img card__image"
-                  src="/src/images/project/homepage.png"
-                  alt="cooking master"
+                  src="/src/images/project/clean-b-1.png"
+                  alt="Clean-B"
                 />
-
                 <div class="card__content">
-                  <h3 class="card__title">cooking master</h3>
+                  <h3 class="card__title">Clean-B</h3>
+                  <span class="card__tag">Website</span>
+                </div>
+                <a
+                  class="card__link--full"
+                  href="/project/clean-b.html"
+                  target="_self"
+                  ><span class="sr-only">Clean-B</span></a
+                >
+              </article>
+            </li>
+            <li>
+              <article class="card card--secondary">
+                <img
+                  class="img card__image"
+                  src="/src/images/project/make-it-happen-3.png"
+                  alt="Make It Happen"
+                />
+                <div class="card__content">
+                  <h3 class="card__title">Make It Happen</h3>
                   <span class="card__tag">School</span>
                 </div>
-                <a class="card__link--full" href="/project/cooking-master.html"
-                  ><span class="sr-only">cooking master</span></a
+                <a
+                  class="card__link--full"
+                  href="/project/make-it-happen.html"
+                  target="_self"
+                  ><span class="sr-only">Make It Happen</span></a
                 >
               </article>
             </li>
@@ -241,34 +238,17 @@
                 <img
                   class="img card__image"
                   src="/src/images/project/demo-portfolio-1.png"
-                  alt="Clean-B"
+                  alt="Demo Portfolio"
                 />
-
                 <div class="card__content">
-                  <h3 class="card__title">Demo portfolio</h3>
-                  <span class="card__tag">School</span>
-                </div>
-                <a class="card__link--full" href="/project/demo-portfolio.html"
-                  ><span class="sr-only">demo-portfolio</span></a
-                >
-              </article>
-            </li>
-            <li>
-              <article class="card card--secondary">
-                <img
-                  class="img card__image"
-                  src="/src/images/project/homepage.png"
-                  alt="cooking master"
-                />
-
-                <div class="card__content">
-                  <h3 class="card__title">cooking master</h3>
+                  <h3 class="card__title">Demo Portfolio</h3>
                   <span class="card__tag">School</span>
                 </div>
                 <a
                   class="card__link--full"
-                  href="http://portfolio.ddev.site/projects/cooking-masters"
-                  ><span class="sr-only">cooking master</span></a
+                  href="/project/demo-portfolio.html"
+                  target="_self"
+                  ><span class="sr-only">Demo Portfolio</span></a
                 >
               </article>
             </li>
@@ -276,7 +256,6 @@
         </div>
       </section>
     </main>
-
     <section class="cta">
       <div class="cta__content container grid grid--cols-2">
         <h2 class="cta__title">Get in touch.</h2>

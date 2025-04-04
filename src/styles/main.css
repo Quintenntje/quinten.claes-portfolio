@@ -30,6 +30,7 @@ body {
   font-style: normal;
   color: var(--foreground);
   background-color: var(--background);
+  overflow-x: hidden;
 }
 
 .main {
@@ -90,5 +91,9 @@ section {
 
 .skip-to-content:focus {
   top: 0;
+}
+
+[aria-haspopup]{
+  cursor: pointer;
 }
 

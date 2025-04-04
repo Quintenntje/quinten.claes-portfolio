@@ -33,7 +33,7 @@
     <meta name="apple-mobile-web-app-title" content="Quinten Claes" />
     <link rel="manifest" href="/src/images/favicon/site.webmanifest" />
     <link rel="stylesheet" href="/build/main.css" />
-    <title>Quinten Claes | clean-b</title>
+    <title>Quinten Claes | cooking Master</title>
   </head>
   <body>
     <div aria-hidden="true" id="blur-mouse" class="blur blur-mouse"></div>
@@ -89,119 +89,69 @@
 
     <main id="main-content" class="main container container--md">
       <section class="page-heading">
-        <h1 class="page_heading__title">Clean-B</h1>
-        <h2 class="page_heading__subtitle">Website</h2>
+        <h1 class="page_heading__title">cooking master</h1>
+        <h2 class="page_heading__subtitle">School</h2>
       </section>
       <section class="grid grid--cols-2 grid--left">
         <div>
-          <h3>Client</h3>
-          <p>Lander Baert</p>
-        </div>
-        <div>
-          <h3>Live project</h3>
+          <i
+            class="icon icon--big icon--spacing-right fa-solid fa-up-right-from-square"
+          ></i>
           <a
-            href="https://www.clean-b.be/"
+            class="link link--transparent"
+            href="https://github.com/pgmgent-pgm-2/recept-web-Quintenntje"
             target="_blank"
             rel="noopener noreferrer"
-            class="link link--transparent"
+            >Visit the website</a
           >
-            <i class="icon fas fa-up-right-from-square"></i>
-            <span>Visit the website</span>
-          </a>
         </div>
       </section>
 
       <section>
-        <h3 class="heading heading--large">Website Development Overview</h3>
         <p class="text text--spacing-bottom">
-          This website was built with a focus on simplicity, performance, and
-          scalability. Using basic HTML, CSS, and JavaScript, the design is
-          clean, responsive, and optimized for all devices, ensuring a great
-          user experience.
+          Cooking Master is a recipe website that offers a clean, user-friendly
+          design built with HTML, CSS, and JavaScript. It features a robust CRUD
+          functionality using a JSON file to manage recipes, allowing users to
+          create, read, update, and delete recipes easily.
         </p>
-
-        <h3 class="heading heading--large">Technology Stack & Deployment</h3>
         <p class="text text--spacing-bottom">
-          To streamline development and deployment, I utilized
-          <span class="tooltip-text">
-            Docker
-            <button
-              aria-label="More information about Docker"
-              aria-haspopup="true"
-              class="btn--transparent"
-              popovertarget="tooltip"
-            >
-              <i class="icon tooltip-icon fa-solid fa-circle-info"></i>
-            </button>
-          </span>
-          with Nginx as the web server, enabling efficient containerization and
-          easy scalability.
-        </p>
-        <div
-          role="alertdialog"
-          popover
-          id="tooltip"
-          class="toast toast--tooltip"
-        >
-          <div id="toast-content" class="toast__content">
-            <div id="toast-text" class="toast__text">
-              <p>
-                Docker helps developers build, share, run, and verify
-                applications anywhere — without tedious environment
-                configuration or management.
-              </p>
-            </div>
-          </div>
-        </div>
-        <p>
-          Additionally, I integrated Jenkins for continuous integration and
-          delivery (CI/CD), ensuring that updates are automatically tested and
-          deployed. This guarantees fast, reliable, and hassle-free deployments
-          while maintaining high-quality standards.
-        </p>
-
-        <h3 class="heading heading--large">
-          Future Enhancements: Contact Form
-        </h3>
-        <p>
-          I plan to add a contact form using PHP, allowing visitors to easily
-          reach out. This form will be securely processed, efficiently handle
-          user inquiries, and integrate seamlessly with the website.
+          Powered by Express.js, the website uses REST API calls to fetch and
+          update recipe data, ensuring fast and secure data handling. Whether
+          you're exploring new recipes or managing your own, Cooking Master
+          provides a seamless, modern experience for all cooking enthusiasts.
         </p>
       </section>
-
       <section>
         <div class="grid grid--larger">
           <img
+            class="img"
             data-trigger="contact-modal"
-            class="img project-img"
-            src="/src/images/project/clean-b-1.png"
-            alt="Clean-B website logo"
             role="button"
-            aria-haspopup="true"
             tabindex="0"
+            aria-haspopup="true"
+            src="/src/images/project/homepage.png"
+            alt="Homepage"
           />
           <img
+            class="img"
             data-trigger="contact-modal"
-            class="img project-img"
-            src="/src/images/project/clean-b-2.png"
-            alt="Clean-B website roofs section"
             role="button"
-            aria-haspopup="true"
             tabindex="0"
+            aria-haspopup="true"
+            src="/src/images/project/adminPanel.png"
+            alt="Admin Panel"
           />
           <img
+            class="img"
             data-trigger="contact-modal"
-            class="img project-img"
-            src="/src/images/project/clean-b-3.png"
-            alt="Clean-B website services section"
             role="button"
-            aria-haspopup="true"
             tabindex="0"
+            aria-haspopup="true"
+            src="/src/images/project/recipePage.png"
+            alt="Admin Panel Recipe form"
           />
         </div>
-
-        <dialog role="dialog" class="modal" data-modal="contact-modal">
+        <dialog class="modal" data-modal="contact-modal">
           <div id="modal-content"></div>
           <button
             class="btn--transparent modal__btn"
@@ -223,52 +173,56 @@
               <article class="card card--secondary">
                 <img
                   class="img card__image"
-                  src="/src/images/project/homepage.png"
-                  alt="cooking master"
+                  src="/src/images/project/best-of-2024-homepage.png"
+                  alt="The best of 2024"
                 />
-
                 <div class="card__content">
-                  <h3 class="card__title">cooking master</h3>
-                  <span class="card__tag">School</span>
-                </div>
-                <a class="card__link--full" href="/project/cooking-master.html"
-                  ><span class="sr-only">cooking master</span></a
-                >
-              </article>
-            </li>
-            <li>
-              <article class="card card--secondary">
-                <img
-                  class="img card__image"
-                  src="/src/images/project/demo-portfolio-1.png"
-                  alt="Clean-B"
-                />
-
-                <div class="card__content">
-                  <h3 class="card__title">Demo portfolio</h3>
-                  <span class="card__tag">School</span>
-                </div>
-                <a class="card__link--full" href="/project/demo-portfolio.html"
-                  ><span class="sr-only">demo-portfolio</span></a
-                >
-              </article>
-            </li>
-            <li>
-              <article class="card card--secondary">
-                <img
-                  class="img card__image"
-                  src="/src/images/project/homepage.png"
-                  alt="cooking master"
-                />
-
-                <div class="card__content">
-                  <h3 class="card__title">cooking master</h3>
+                  <h3 class="card__title">The best of 2024</h3>
                   <span class="card__tag">School</span>
                 </div>
                 <a
                   class="card__link--full"
-                  href="http://portfolio.ddev.site/projects/cooking-masters"
-                  ><span class="sr-only">cooking master</span></a
+                  href="http://portfolio.ddev.site/projects/the-best-of-2024"
+                  target="_self"
+                  ><span class="sr-only">The best of 2024</span></a
+                >
+              </article>
+            </li>
+            <li>
+              <article class="card card--secondary">
+                <img
+                  class="img card__image"
+                  src="/src/images/project/clean-b-1.png"
+                  alt="Clean-B"
+                />
+                <div class="card__content">
+                  <h3 class="card__title">Clean-B</h3>
+                  <span class="card__tag">Website</span>
+                </div>
+                <a
+                  class="card__link--full"
+                  href="/project/clean-b.html"
+                  target="_self"
+                  ><span class="sr-only">Clean-B</span></a
+                >
+              </article>
+            </li>
+            <li>
+              <article class="card card--secondary">
+                <img
+                  class="img card__image"
+                  src="/src/images/project/make-it-happen-3.png"
+                  alt="Make it happen"
+                />
+                <div class="card__content">
+                  <h3 class="card__title">Make it happen</h3>
+                  <span class="card__tag">School</span>
+                </div>
+                <a
+                  class="card__link--full"
+                  href="/project/make-it-happen.html"
+                  target="_self"
+                  ><span class="sr-only">Make it happen</span></a
                 >
               </article>
             </li>
