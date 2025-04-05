@@ -619,7 +619,7 @@ h2 {
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 
 .card__link--full {
@@ -632,6 +632,8 @@ h2 {
 }
 
 .card--secondary {
+  background-color: var(--color-black);
+  border-radius: 0;
   @container(max-width: 767px) {
     .card__image {
       -webkit-mask-image: linear-gradient(var(--color-black), transparent);
@@ -643,6 +645,7 @@ h2 {
     position: absolute;
     bottom: 1rem;
     left: 1rem;
+    z-index: 10;
 
     .card__tag {
       background: var(--accent);
@@ -679,6 +682,7 @@ h2 {
   &:hover .card__image {
     -webkit-mask-image: linear-gradient(var(--color-black), transparent);
             mask-image: linear-gradient(var(--color-black), transparent);
+    
   }
 }
 
