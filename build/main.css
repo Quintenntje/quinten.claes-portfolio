@@ -628,13 +628,13 @@ h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .card--secondary {
   background-color: var(--color-black);
   border-radius: 0;
-  @container(max-width: 767px) {
+  @container (max-width: 767px) {
     .card__image {
       -webkit-mask-image: linear-gradient(var(--color-black), transparent);
               mask-image: linear-gradient(var(--color-black), transparent);
@@ -682,7 +682,6 @@ h2 {
   &:hover .card__image {
     -webkit-mask-image: linear-gradient(var(--color-black), transparent);
             mask-image: linear-gradient(var(--color-black), transparent);
-    
   }
 }
 
@@ -699,7 +698,8 @@ h2 {
   max-width: 60px;
   border: 1px solid var(--border);
 
-  &:hover , &:focus {
+  &:hover,
+  &:focus {
     background: var(--accent);
     color: var(--accent-foreground);
     box-shadow: 0 0 10px var(--primary);
