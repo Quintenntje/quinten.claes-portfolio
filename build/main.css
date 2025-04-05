@@ -335,20 +335,25 @@ h2 {
   display: none;
 }
 
-.cta{
-    width: 100%;
-    background-color: var(--muted);
-    padding: 2rem;
-    container-type: inline-size;
+.cta {
+  width: 100%;
+  background-color: var(--muted);
+  padding: 2rem;
+  container-type: inline-size;
 }
-.cta__title{
+.cta__title {
+  font-size: var(--font-size-4xl);
+
+  @media (min-width: 768px) {
     font-size: var(--font-size-6xl);
+  }
 }
-.cta__content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.cta__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 .contact__form, .contact__details {
   width: 100%;
 }
@@ -370,30 +375,6 @@ h2 {
 .form__group__label:has(+ .input[required])::after {
   content: "*";
   color: var(--primary);
-}
-
-.hero {
-  min-height: 50dvh;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero__content{
-  display: grid;
-  grid-template-columns: subgrid;
-}
-
-.hero__links {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-4);
-  margin-top: var(--spacing-4);
-
-  @container (min-width: 500px) {
-    flex-direction: row;
-  }
 }
 
 .btn {
@@ -581,6 +562,32 @@ h2 {
 
   .grid--col-span-2 {
     grid-column: span 2;
+  }
+}
+
+
+.hero {
+  min-height: 50dvh;
+  height: 100%;
+
+  @container (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero__content {
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+.hero__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-4);
+
+  @container (min-width: 500px) {
+    flex-direction: row;
   }
 }
 
@@ -1039,7 +1046,6 @@ body {
 .container--md {
   max-width: var(--container-width-md);
 }
-
 
 a {
   text-decoration: none;

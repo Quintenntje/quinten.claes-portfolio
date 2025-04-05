@@ -6,13 +6,13 @@
 @import "./layout/navbar.css";
 @import "./layout/cta.css";
 @import "./layout/form.css";
-@import "./layout/hero.css";
 @import "./components/button.css";
 @import "./components/input.css";
 @import "./base/page-heading.css";
 @import "./components/text.css";
 @import "./components/icon.css";
 @import "./layout/grid.css";
+@import "./layout/hero.css";
 @import "./components/card.css";
 @import "./components/link.css";
 @import "./components/img.css";
@@ -50,7 +50,6 @@ body {
 .container--md {
   max-width: var(--container-width-md);
 }
-
 
 a {
   text-decoration: none;

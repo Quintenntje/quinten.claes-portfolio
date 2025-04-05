@@ -1,12 +1,13 @@
 .hero {
   min-height: 50dvh;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  @container (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
 }
 
-.hero__content{
+.hero__content {
   display: grid;
   grid-template-columns: subgrid;
 }
