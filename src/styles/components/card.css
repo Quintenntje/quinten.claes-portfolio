@@ -113,7 +113,6 @@
   &:focus {
     background: var(--accent);
     color: var(--accent-foreground);
-    box-shadow: 0 0 10px var(--primary);
     transition: all 0.3s;
   }
   .icon-card__icon {
