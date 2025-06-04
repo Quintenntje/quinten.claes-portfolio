@@ -8,16 +8,34 @@
   border: none;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
 }
 
 .link--transparent {
   color: var(--foreground);
   padding: 0;
   border-radius: 0;
+  position: relative;
 
-  &:hover,
-  &:focus {
-    border-bottom: 1px solid var(--foreground);
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--foreground);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 }
 
@@ -37,13 +55,34 @@
 .link--primary {
   color: var(--primary-foreground);
   background-color: var(--primary);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-foreground);
+    clip-path: circle(0% at 0% 100%);
+    transition: clip-path 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    clip-path: circle(150% at 0% 100%);
+  }
 
   &:hover,
   &:focus {
-    background-color: var(--primary-foreground);
     color: var(--primary);
-
-    transition: all 0.3s ease-in-out;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
   }
 }
 
@@ -51,11 +90,31 @@
   color: var(--secondary-foreground);
   background-color: transparent;
   border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-foreground);
+    clip-path: circle(0% at 0% 100%);
+    transition: clip-path 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    clip-path: circle(150% at 0% 100%);
+  }
 
   &:hover,
   &:focus {
-    background-color: var(--secondary-foreground);
     color: var(--secondary);
-    transition: all 0.3s ease-in-out;
+    border-color: transparent;
   }
 }

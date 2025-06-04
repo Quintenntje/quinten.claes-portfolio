@@ -9,21 +9,21 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /*
   2. Remove default margin
 */
 * {
-  margin: 0;
+    margin: 0;
 }
 
 /*
   3. Allow percentage-based heights in the application
 */
 html {
-  height: 100%;
+    height: 100%;
 }
 
 /*
@@ -32,44 +32,31 @@ html {
   5. Improve text rendering
 */
 body {
-  min-height: 100%;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+    min-height: 100%;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
 
 /*
   6. Improve media defaults
 */
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
 }
 
 /*
   7. Remove built-in form typography styles
 */
-input,
-button,
-textarea,
-select {
-  font: inherit;
+input, button, textarea, select {
+    font: inherit;
 }
 
 /*
   8. Avoid text overflows
 */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
 }
 h1 {
   font-size: var(--font-size-5xl);
@@ -79,7 +66,8 @@ h2 {
   font-size: var(--font-size-2xl);
 }
 
-@media screen and (max-width: 340px) {
+
+@media screen and (max-width: 340px){
   h1 {
     font-size: var(--font-size-4xl);
   }
@@ -211,11 +199,11 @@ h2 {
   top: 0;
 }
 
-.footer {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  height: 5rem;
+.footer{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 5rem;
 }
 .nav {
   height: 80px;
@@ -229,7 +217,7 @@ h2 {
   width: 100%;
   background: hsla(var(--background), 0.25);
   -webkit-backdrop-filter: blur(24px);
-  backdrop-filter: blur(24px);
+          backdrop-filter: blur(24px);
   border: 1px solid hsla(var(--border), 0.18);
   z-index: 1000;
 
@@ -366,8 +354,7 @@ h2 {
   align-items: center;
 }
 
-.contact__form,
-.contact__details {
+.contact__form, .contact__details {
   width: 100%;
 }
 .form {
@@ -415,11 +402,10 @@ h2 {
   color: var(--primary-foreground);
   background-color: var(--primary);
 
-  &:hover,
-  &:focus {
+  &:hover, &:focus{
     background-color: var(--primary-foreground);
     color: var(--primary);
-
+  
     transition: all 0.3s ease-in-out;
   }
 }
@@ -429,12 +415,13 @@ h2 {
   background-color: transparent;
   border: 1px solid var(--border);
 
-  &:hover &:focus {
+  &:hover &:focus{
     background-color: var(--secondary-foreground);
     color: var(--secondary);
     transition: all 0.3s ease-in-out;
   }
 }
+
 
 .input {
   background-color: var(--input);
@@ -480,7 +467,7 @@ h2 {
       var(--color-black) 90%,
       transparent 100%
     );
-    mask-image: linear-gradient(
+            mask-image: linear-gradient(
       60deg,
       transparent 0%,
       var(--color-black) 10%,
@@ -512,12 +499,12 @@ h2 {
   font-weight: var(--font-weight-extrabold);
 }
 
-.text--bigger {
-  font-size: 1.25em;
+.text--bigger{
+    font-size: 1.25em; 
 }
 
-.text--spacing-bottom {
-  margin-bottom: var(--spacing-4);
+.text--spacing-bottom{
+    margin-bottom: var(--spacing-4);
 }
 .icon {
   color: var(--foreground);
@@ -559,7 +546,7 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 
   @container (min-width: 1200px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
   }
 }
 
@@ -577,6 +564,7 @@ h2 {
     grid-column: span 2;
   }
 }
+
 
 .hero {
   min-height: 50dvh;
@@ -636,7 +624,7 @@ h2 {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   position: relative;
   z-index: 1;
 }
@@ -656,7 +644,7 @@ h2 {
   @container (max-width: 767px) {
     .card__image {
       -webkit-mask-image: linear-gradient(var(--color-black), transparent);
-      mask-image: linear-gradient(var(--color-black), transparent);
+              mask-image: linear-gradient(var(--color-black), transparent);
     }
   }
 
@@ -700,7 +688,7 @@ h2 {
 
   &:hover .card__image {
     -webkit-mask-image: linear-gradient(var(--color-black), transparent);
-    mask-image: linear-gradient(var(--color-black), transparent);
+            mask-image: linear-gradient(var(--color-black), transparent);
   }
 }
 
@@ -741,16 +729,34 @@ h2 {
   border: none;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
 }
 
 .link--transparent {
   color: var(--foreground);
   padding: 0;
   border-radius: 0;
+  position: relative;
 
-  &:hover,
-  &:focus {
-    border-bottom: 1px solid var(--foreground);
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--foreground);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 }
 
@@ -770,13 +776,34 @@ h2 {
 .link--primary {
   color: var(--primary-foreground);
   background-color: var(--primary);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-foreground);
+    clip-path: circle(0% at 0% 100%);
+    transition: clip-path 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    clip-path: circle(150% at 0% 100%);
+  }
 
   &:hover,
   &:focus {
-    background-color: var(--primary-foreground);
     color: var(--primary);
-
-    transition: all 0.3s ease-in-out;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
   }
 }
 
@@ -784,12 +811,32 @@ h2 {
   color: var(--secondary-foreground);
   background-color: transparent;
   border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-foreground);
+    clip-path: circle(0% at 0% 100%);
+    transition: clip-path 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    clip-path: circle(150% at 0% 100%);
+  }
 
   &:hover,
   &:focus {
-    background-color: var(--secondary-foreground);
     color: var(--secondary);
-    transition: all 0.3s ease-in-out;
+    border-color: transparent;
   }
 }
 
@@ -797,7 +844,7 @@ h2 {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .img--circle {
@@ -813,7 +860,7 @@ h2 {
       var(--muted) 80%
     )
     1;
-  border-image: linear-gradient(
+     border-image: linear-gradient(
       to bottom,
       var(--foreground) 0%,
       var(--muted) 80%
@@ -831,7 +878,7 @@ h2 {
   margin-bottom: var(--spacing-5);
 }
 
-.timeline__heading__date {
+.timeline__heading__date{
   font-size: var(--font-size-sm);
   color: var(--muted-foreground);
 }
@@ -974,63 +1021,6 @@ h2 {
   position: relative;
 }
 
-. {
-  animation: fadeIn 1s;
-  animation-iteration-count: 1;
-  animation-timeline: view();
-
-  &.-direct {
-    animation-timeline: none;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    translate: 0 1rem;
-  }
-  to {
-    opacity: 100;
-    transform: 0 0rem;
-  }
-}
-
-. {
-  animation: moveUp 1s;
-  animation-iteration-count: 1;
-  animation-timeline: view();
-
-  &.-direct {
-    animation-timeline: none;
-  }
-}
-
-@keyframes moveUp {
-  from {
-    translate: 0 4rem;
-  }
-  to {
-    transform: 0 0rem;
-  }
-}
-
-@view-transition {
-  navigation: auto;
-}
-
-::view-transition-group(root) {
-  animation-duration: 1s;
-}
-
-::view-transition-group(navbar) {
-  animation: none;
-}
-
-::view-transition-new(root) {
-  animation: fadeIn;
-  animation-duration: 2s;
-}
-
 body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -1090,3 +1080,4 @@ section {
 [aria-haspopup] {
   cursor: pointer;
 }
+
