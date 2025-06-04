@@ -580,6 +580,17 @@ h2 {
   grid-template-columns: subgrid;
 }
 
+.hero__title {
+  margin: var(--spacing-2) 0 var(--spacing-4);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+
+  @container (min-width: 768px) {
+    font-size: var(--font-size-6xl);
+  }
+}
+
 .hero__links {
   display: flex;
   flex-direction: column;
@@ -1019,6 +1030,33 @@ h2 {
   align-items: center;
   gap: 1rem;
   position: relative;
+}
+
+/* Belgium flag text styling */
+.flag-text {
+  display: inline-flex;
+  align-items: center;
+}
+
+.flag-text__item {
+  display: inline-block;
+  padding: 0 2px;
+  transition: color 0.3s ease;
+}
+
+.flag-text__item--black {
+  color: #262525;
+  font-weight: 600;
+}
+
+.flag-text__item--yellow {
+  color: #fdda24;
+  font-weight: 600;
+}
+
+.flag-text__item--red {
+  color: #ef3340;
+  font-weight: 600;
 }
 
 body {

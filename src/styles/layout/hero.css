@@ -12,6 +12,17 @@
   grid-template-columns: subgrid;
 }
 
+.hero__title {
+  margin: var(--spacing-2) 0 var(--spacing-4);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+
+  @container (min-width: 768px) {
+    font-size: var(--font-size-6xl);
+  }
+}
+
 .hero__links {
   display: flex;
   flex-direction: column;

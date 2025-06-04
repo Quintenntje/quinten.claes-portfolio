@@ -99,9 +99,16 @@
     <main id="main-content" class="main container">
       <section class="hero grid grid--cols-2">
         <div class="hero__content">
-          <span>Hi, Im Quinten Claes</span>
-          <h1>Front-back end webdeveloper based in Belgium</h1>
-          <div class="hero__links">
+          <span data-animation="fade-in">Hi, I'm Quinten Claes</span>
+          <h1 data-animation="stagger" class="hero__title">
+            Front-back end webdeveloper based in
+            <span class="flag-text">
+              <span class="flag-text__item flag-text__item--black">Bel</span
+              ><span class="flag-text__item flag-text__item--yellow">gi</span
+              ><span class="flag-text__item flag-text__item--red">um</span>
+            </span>
+          </h1>
+          <div class="hero__links" data-animation="fade-in">
             <a class="link link--secondary" href="projects.html" target="_self"
               >See my projects</a
             >
@@ -120,10 +127,13 @@
       </section>
       <section class="grid grid--cols-2" id="about">
         <div>
-          <h2 class="heading heading--spacing-big page_heading__subtitle">
+          <h2
+            class="heading heading--spacing-big page_heading__subtitle"
+            data-animation="stagger"
+          >
             About me
           </h2>
-          <p>
+          <p data-animation="fade-in">
             I'm Quinten Claes, a passionate web development student at Artevelde
             University College. I'm exploring technology, building user-centered
             solutions, and always learning. Let's connect!
@@ -282,8 +292,11 @@
           </div>
         </div>
       </section>
-      <section>
-        <h2 class="heading heading--spacing-big page_heading__subtitle">
+      <section data-animation="fade-in">
+        <h2
+          class="heading heading--spacing-big page_heading__subtitle"
+          data-animation="stagger"
+        >
           My projects
         </h2>
         <div>
@@ -377,17 +390,20 @@
         </div>
       </section>
     </main>
-
     <section class="cta">
       <div class="cta__content container grid grid--cols-2">
-        <h2 class="cta__title">Get in touch.</h2>
-        <a class="link link--primary" href="contact.html">Contact me</a>
+        <h2 class="cta__title" data-animation="stagger">Get in touch.</h2>
+        <a
+          class="link link--primary"
+          data-animation="fade-in"
+          href="contact.html"
+          >Contact me</a
+        >
       </div>
     </section>
     <footer class="footer">
       <p>&copy;2025 Made by Quinten Claes</p>
     </footer>
-
-    <script src="/build/main.js" type="module"></script>
+    <script src="./build/main.js" type="module"></script>
   </body>
 </html>
