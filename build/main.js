@@ -10173,6 +10173,7 @@ var initScrollAnimations = function initScrollAnimations() {
       scrollTrigger: {
         trigger: element,
         start: "top bottom-=100px",
+        toggleActions: "play none none reverse",
         once: true
       }
     });

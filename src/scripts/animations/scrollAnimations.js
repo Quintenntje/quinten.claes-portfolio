@@ -5,22 +5,17 @@ import { SplitText } from "gsap/SplitText";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const initScrollAnimations = () => {
-
   const animatedElements = document.querySelectorAll("[data-animation]");
 
-  
   const titleElements = document.querySelectorAll("[data-animation='stagger']");
 
-
   titleElements.forEach((element) => {
-    
     const splitText = new SplitText(element, {
       type: "chars,words",
       linesClass: "line",
       charsClass: "char",
       wordsClass: "word",
     });
-
 
     gsap.fromTo(
       splitText.chars,
@@ -40,12 +35,12 @@ const initScrollAnimations = () => {
         scrollTrigger: {
           trigger: element,
           start: "top bottom-=100px",
+          toggleActions: "play none none reverse",
           once: true,
         },
       }
     );
   });
-
 
   animatedElements.forEach((element) => {
     const animationType = element.dataset.animation;
@@ -95,7 +90,7 @@ const initScrollAnimations = () => {
         opacity: 1,
         y: 0,
         duration: 0.8,
-        stagger: 0.03, 
+        stagger: 0.03,
         ease: "power2.out",
         scrollTrigger: {
           trigger: title,
