@@ -10057,13 +10057,77 @@ var initFlagAnimation = function initFlagAnimation() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   initFlagAnimation: () => (/* reexport safe */ _flagAnimation_js__WEBPACK_IMPORTED_MODULE_0__.initFlagAnimation),
+/* harmony export */   initPullAnimation: () => (/* reexport safe */ _pullAnimation_js__WEBPACK_IMPORTED_MODULE_2__.initPullAnimation),
 /* harmony export */   initScrollAnimations: () => (/* reexport safe */ _scrollAnimations_js__WEBPACK_IMPORTED_MODULE_1__.initScrollAnimations)
 /* harmony export */ });
 /* harmony import */ var _flagAnimation_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./flagAnimation.js */ "./src/scripts/animations/flagAnimation.js");
 /* harmony import */ var _scrollAnimations_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scrollAnimations.js */ "./src/scripts/animations/scrollAnimations.js");
+/* harmony import */ var _pullAnimation_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pullAnimation.js */ "./src/scripts/animations/pullAnimation.js");
 
 
 
+
+
+/***/ }),
+
+/***/ "./src/scripts/animations/pullAnimation.js":
+/*!*************************************************!*\
+  !*** ./src/scripts/animations/pullAnimation.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   initPullAnimation: () => (/* binding */ initPullAnimation)
+/* harmony export */ });
+function initPullAnimation() {
+  var pullElements = document.querySelectorAll('[data-animation="pull"]');
+  if (!pullElements.length) return;
+  var config = {
+    maxDistance: 300,
+    pullStrength: 0.50,
+    returnSpeed: 0.2
+  };
+  var elementPositions = new Map();
+  pullElements.forEach(function (element) {
+    var rect = element.getBoundingClientRect();
+    var originalX = rect.left + rect.width / 2;
+    var originalY = rect.top + rect.height / 2 + window.scrollY;
+    elementPositions.set(element, {
+      originalX: originalX,
+      originalY: originalY,
+      currentX: originalX,
+      currentY: originalY
+    });
+    if (window.getComputedStyle(element).position === "static") {
+      element.style.position = "relative";
+    }
+  });
+  document.addEventListener("mousemove", function (e) {
+    var mouseX = e.clientX;
+    var mouseY = e.clientY + window.scrollY;
+    pullElements.forEach(function (element) {
+      var position = elementPositions.get(element);
+      var rect = element.getBoundingClientRect();
+      var elemCenterX = rect.left + rect.width / 2;
+      var elemCenterY = rect.top + rect.height / 2 + window.scrollY;
+      var deltaX = mouseX - elemCenterX;
+      var deltaY = mouseY - elemCenterY;
+      var distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+      if (distance < config.maxDistance) {
+        var pullFactor = (1 - distance / config.maxDistance) * config.pullStrength;
+        position.currentX = position.originalX + deltaX * pullFactor;
+        position.currentY = position.originalY + deltaY * pullFactor;
+      } else {
+        position.currentX += (position.originalX - position.currentX) * config.returnSpeed;
+        position.currentY += (position.originalY - position.currentY) * config.returnSpeed;
+      }
+      var translateX = position.currentX - position.originalX;
+      var translateY = position.currentY - position.originalY;
+      element.style.transform = "translate(".concat(translateX, "px, ").concat(translateY, "px)");
+    });
+  });
+}
 
 /***/ }),
 
@@ -10260,6 +10324,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_modal_js__WEBPACK_IMPORTED_MODULE_2__.initModals)();
 (0,_animations_index_js__WEBPACK_IMPORTED_MODULE_3__.initScrollAnimations)();
 (0,_animations_index_js__WEBPACK_IMPORTED_MODULE_3__.initFlagAnimation)();
+(0,_animations_index_js__WEBPACK_IMPORTED_MODULE_3__.initPullAnimation)();
 
 /***/ }),
 
