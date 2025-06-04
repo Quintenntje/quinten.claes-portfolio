@@ -108,16 +108,72 @@
   max-height: 60px;
   max-width: 60px;
   border: 1px solid var(--border);
+  transition: all 0.3s;
 
   &:hover,
   &:focus {
     background: var(--accent);
     color: var(--accent-foreground);
-    transition: all 0.3s;
   }
   .icon-card__icon {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.icon-card--html {
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0 4px 12px rgba(227, 79, 38, 0.5));
+    transition: filter 0.3s ease;
+  }
+}
+
+.icon-card--css {
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0 4px 12px rgba(38, 77, 228, 0.5));
+    transition: filter 0.3s ease;
+  }
+}
+
+.icon-card--javascript {
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0 4px 12px rgba(240, 219, 79, 0.5));
+    transition: filter 0.3s ease;
+  }
+}
+
+.icon-card--react {
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0 4px 12px rgba(88, 196, 220, 0.5));
+    transition: filter 0.3s ease;
+  }
+}
+
+.icon-card--php {
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0 4px 12px rgba(119, 123, 180, 0.7));
+    transition: filter 0.3s ease;
+  }
+}
+
+.icon-card--mysql {
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0 4px 12px rgba(0, 84, 107, 0.5));
+    transition: filter 0.3s ease;
+  }
+}
+
+.icon-card--docker {
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0 4px 12px rgba(0, 143, 226, 0.5));
+    transition: filter 0.3s ease;
   }
 }
