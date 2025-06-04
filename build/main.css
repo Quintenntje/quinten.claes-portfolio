@@ -9,21 +9,21 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*
   2. Remove default margin
 */
 * {
-    margin: 0;
+  margin: 0;
 }
 
 /*
   3. Allow percentage-based heights in the application
 */
 html {
-    height: 100%;
+  height: 100%;
 }
 
 /*
@@ -32,31 +32,44 @@ html {
   5. Improve text rendering
 */
 body {
-    min-height: 100%;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 /*
   6. Improve media defaults
 */
-img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
 }
 
 /*
   7. Remove built-in form typography styles
 */
-input, button, textarea, select {
-    font: inherit;
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 /*
   8. Avoid text overflows
 */
-p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }
 h1 {
   font-size: var(--font-size-5xl);
@@ -66,8 +79,7 @@ h2 {
   font-size: var(--font-size-2xl);
 }
 
-
-@media screen and (max-width: 340px){
+@media screen and (max-width: 340px) {
   h1 {
     font-size: var(--font-size-4xl);
   }
@@ -199,11 +211,11 @@ h2 {
   top: 0;
 }
 
-.footer{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    height: 5rem;
+.footer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 5rem;
 }
 .nav {
   height: 80px;
@@ -217,7 +229,7 @@ h2 {
   width: 100%;
   background: hsla(var(--background), 0.25);
   -webkit-backdrop-filter: blur(24px);
-          backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
   border: 1px solid hsla(var(--border), 0.18);
   z-index: 1000;
 
@@ -354,7 +366,8 @@ h2 {
   align-items: center;
 }
 
-.contact__form, .contact__details {
+.contact__form,
+.contact__details {
   width: 100%;
 }
 .form {
@@ -402,10 +415,11 @@ h2 {
   color: var(--primary-foreground);
   background-color: var(--primary);
 
-  &:hover, &:focus{
+  &:hover,
+  &:focus {
     background-color: var(--primary-foreground);
     color: var(--primary);
-  
+
     transition: all 0.3s ease-in-out;
   }
 }
@@ -415,13 +429,12 @@ h2 {
   background-color: transparent;
   border: 1px solid var(--border);
 
-  &:hover &:focus{
+  &:hover &:focus {
     background-color: var(--secondary-foreground);
     color: var(--secondary);
     transition: all 0.3s ease-in-out;
   }
 }
-
 
 .input {
   background-color: var(--input);
@@ -467,7 +480,7 @@ h2 {
       var(--color-black) 90%,
       transparent 100%
     );
-            mask-image: linear-gradient(
+    mask-image: linear-gradient(
       60deg,
       transparent 0%,
       var(--color-black) 10%,
@@ -499,12 +512,12 @@ h2 {
   font-weight: var(--font-weight-extrabold);
 }
 
-.text--bigger{
-    font-size: 1.25em; 
+.text--bigger {
+  font-size: 1.25em;
 }
 
-.text--spacing-bottom{
-    margin-bottom: var(--spacing-4);
+.text--spacing-bottom {
+  margin-bottom: var(--spacing-4);
 }
 .icon {
   color: var(--foreground);
@@ -546,7 +559,7 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 
   @container (min-width: 1200px) {
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -564,7 +577,6 @@ h2 {
     grid-column: span 2;
   }
 }
-
 
 .hero {
   min-height: 50dvh;
@@ -624,7 +636,7 @@ h2 {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: relative;
   z-index: 1;
 }
@@ -644,7 +656,7 @@ h2 {
   @container (max-width: 767px) {
     .card__image {
       -webkit-mask-image: linear-gradient(var(--color-black), transparent);
-              mask-image: linear-gradient(var(--color-black), transparent);
+      mask-image: linear-gradient(var(--color-black), transparent);
     }
   }
 
@@ -688,7 +700,7 @@ h2 {
 
   &:hover .card__image {
     -webkit-mask-image: linear-gradient(var(--color-black), transparent);
-            mask-image: linear-gradient(var(--color-black), transparent);
+    mask-image: linear-gradient(var(--color-black), transparent);
   }
 }
 
@@ -785,7 +797,7 @@ h2 {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .img--circle {
@@ -801,7 +813,7 @@ h2 {
       var(--muted) 80%
     )
     1;
-     border-image: linear-gradient(
+  border-image: linear-gradient(
       to bottom,
       var(--foreground) 0%,
       var(--muted) 80%
@@ -819,7 +831,7 @@ h2 {
   margin-bottom: var(--spacing-5);
 }
 
-.timeline__heading__date{
+.timeline__heading__date {
   font-size: var(--font-size-sm);
   color: var(--muted-foreground);
 }
@@ -962,12 +974,12 @@ h2 {
   position: relative;
 }
 
-.fade-in {
+. {
   animation: fadeIn 1s;
   animation-iteration-count: 1;
   animation-timeline: view();
 
-  &.fade-in-direct {
+  &.-direct {
     animation-timeline: none;
   }
 }
@@ -983,12 +995,12 @@ h2 {
   }
 }
 
-.move-up {
+. {
   animation: moveUp 1s;
   animation-iteration-count: 1;
   animation-timeline: view();
 
-  &.fade-in-direct {
+  &.-direct {
     animation-timeline: none;
   }
 }
@@ -1015,11 +1027,9 @@ h2 {
 }
 
 ::view-transition-new(root) {
-    animation: fadeIn;
-    animation-duration: 2s;
+  animation: fadeIn;
+  animation-duration: 2s;
 }
-
-
 
 body {
   font-family: "Inter", sans-serif;
@@ -1080,4 +1090,3 @@ section {
 [aria-haspopup] {
   cursor: pointer;
 }
-

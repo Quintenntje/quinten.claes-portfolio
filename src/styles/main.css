@@ -21,9 +21,6 @@
 @import "./components/svg.css";
 @import "./components/modal.css";
 @import "./components/toast.css";
-@import "./animations/fade-in.css";
-@import "./animations/move-up.css";
-@import "./animations/view-transitions.css";
 
 body {
   font-family: "Inter", sans-serif;
