@@ -33,7 +33,7 @@
     <meta name="apple-mobile-web-app-title" content="Quinten Claes" />
     <link rel="manifest" href="../src/images/favicon/site.webmanifest" />
     <link rel="stylesheet" href="../build/main.css" />
-    <title>Quinten Claes | clean-b</title>
+    <title>Quinten Claes | ping pong tool</title>
   </head>
   <body>
     <div aria-hidden="true" id="blur-mouse" class="blur blur-mouse"></div>
@@ -91,83 +91,86 @@
 
     <main id="main-content" class="main container container--md">
       <section class="page-heading">
-        <h1 class="page_heading__title" data-animation="fade-up">Clean-B</h1>
-        <h2 class="page_heading__subtitle" data-animation="stagger">Website</h2>
+        <h1 class="page_heading__title" data-animation="fade-up">
+          Pingpong tool
+        </h1>
+        <h2 class="page_heading__subtitle" data-animation="stagger">School</h2>
       </section>
       <section class="grid grid--cols-2 grid--left">
         <div>
-          <h3>Client</h3>
-          <p>Lander Baert</p>
-        </div>
-        <div>
-          <h3>Live project</h3>
           <a
-            href="https://www.clean-b.be/"
+            href="https://github.com/pgmgent-atwork2/project-2-werkstuk-achronix"
             target="_blank"
             rel="noopener noreferrer"
             class="link link--transparent"
           >
             <i class="icon fas fa-up-right-from-square"></i>
-            <span>Visit the website</span>
+            <span>Visit the github</span>
           </a>
         </div>
       </section>
 
       <section>
-        <h3 class="heading heading--large">Website Development Overview</h3>
+        <h3 class="heading heading--large">Project Overview</h3>
         <p class="text text--spacing-bottom">
-          This website was built with a focus on simplicity, performance, and
-          scalability. Using basic HTML, CSS, and JavaScript, the design is
-          clean, responsive, and optimized for all devices, ensuring a great
-          user experience.
+          The Ping Pong Tool was developed to modernize a local ping pong club's
+          operations, replacing their inefficient paper-based drink ordering
+          system with a comprehensive digital solution. This full-stack web
+          application manages everything from member authentication and match
+          scheduling to financial tracking and payment processing.
         </p>
 
-        <h3 class="heading heading--large">Technology Stack & Deployment</h3>
+        <h3 class="heading heading--large">Technology Stack & Architecture</h3>
         <p class="text text--spacing-bottom">
-          To streamline development and deployment, I utilized
-          <span class="tooltip-text">
-            Docker
-            <button
-              aria-label="More information about Docker"
-              aria-haspopup="true"
-              class="btn--transparent"
-              popovertarget="tooltip"
-            >
-              <i class="icon tooltip-icon fa-solid fa-circle-info"></i>
-            </button>
-          </span>
-          with Nginx as the web server, enabling efficient containerization and
-          easy scalability.
+          Built with Node.js and Express.js for the backend, the application
+          uses Objection.js ORM with Knex.js for database operations and SQLite
+          for reliable data storage. The frontend combines EJS templating with
+          vanilla JavaScript and responsive CSS, ensuring optimal performance
+          across all devices.
         </p>
-        <div
-          role="alertdialog"
-          popover
-          id="tooltip"
-          class="toast toast--tooltip"
-        >
-          <div id="toast-content" class="toast__content">
-            <div id="toast-text" class="toast__text">
-              <p>
-                Docker helps developers build, share, run, and verify
-                applications anywhere — without tedious environment
-                configuration or management.
-              </p>
-            </div>
-          </div>
-        </div>
-        <p>
-          Additionally, I integrated Jenkins for continuous integration and
-          delivery (CI/CD), ensuring that updates are automatically tested and
-          deployed. This guarantees fast, reliable, and hassle-free deployments
-          while maintaining high-quality standards.
+
+        <p class="text text--spacing-bottom">
+          Security is handled through JWT authentication with bcrypt password
+          hashing, while the modular architecture allows for easy maintenance
+          and scalability as the club grows.
         </p>
-        <h3 class="heading heading--large" data-animation="stagger">
-          Future Enhancements: Contact Form
-        </h3>
-        <p>
-          I plan to add a contact form using PHP, allowing visitors to easily
-          reach out. This form will be securely processed, efficiently handle
-          user inquiries, and integrate seamlessly with the website.
+
+        <h3 class="heading heading--large">Core Features & Functionality</h3>
+        <p class="text text--spacing-bottom">
+          The system includes a complete user management system with role-based
+          access control, allowing administrators to manage members, guests, and
+          permissions. Members can track their match attendance, view team
+          schedules, and participate in player selection for upcoming games.
+        </p>
+
+        <p class="text text--spacing-bottom">
+          The digital ordering system features a product catalog with real-time
+          stock management, shopping cart functionality, and integrated payment
+          processing through Mollie. This eliminates the club's previous
+          paper-based ordering problems and provides accurate financial
+          tracking.
+        </p>
+
+        <h3 class="heading heading--large">Administrative Dashboard</h3>
+        <p class="text text--spacing-bottom">
+          Administrators benefit from a comprehensive management panel that
+          handles user accounts, financial reporting, and system configuration.
+          The dashboard includes data export functionality for record keeping
+          and a notification system for member communication.
+        </p>
+
+        <p class="text text--spacing-bottom">
+          Match management features allow importing schedules from ICS files,
+          tracking attendance in real-time, and managing team assignments
+          efficiently, replacing manual scheduling processes.
+        </p>
+
+        <h3 class="heading heading--large">Payments</h3>
+        <p class="text text--spacing-bottom">
+          The application integrates Mollie payment gateway for online
+          transactions while also supporting cash payments for in-person
+          purchases. Order statuses update automatically based on payment
+          confirmation, providing seamless financial management.
         </p>
       </section>
 
@@ -176,8 +179,8 @@
           <img
             data-trigger="contact-modal"
             class="img project-img"
-            src="../src/images/project/clean-b-1.png"
-            alt="Clean-B website logo"
+            src="../src/images/project/ping-pong-dashboard.png"
+            alt="Ping Pong Dashboard"
             role="button"
             aria-haspopup="true"
             tabindex="0"
@@ -185,8 +188,8 @@
           <img
             data-trigger="contact-modal"
             class="img project-img"
-            src="../src/images/project/clean-b-2.png"
-            alt="Clean-B website roofs section"
+            src="../src/images/project/pingpong-login.png"
+            alt="Ping Pong Login"
             role="button"
             aria-haspopup="true"
             tabindex="0"
@@ -194,8 +197,8 @@
           <img
             data-trigger="contact-modal"
             class="img project-img"
-            src="../src/images/project/clean-b-3.png"
-            alt="Clean-B website services section"
+            src="../src/images/project/pingpong-admin.png"
+            alt="Ping Pong Admin"
             role="button"
             aria-haspopup="true"
             tabindex="0"
