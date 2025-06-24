@@ -22,6 +22,7 @@
 @import "./components/modal.css";
 @import "./components/toast.css";
 @import "./components/flag-text.css";
+@import "./components/loader.css";
 
 body {
   font-family: "Inter", sans-serif;

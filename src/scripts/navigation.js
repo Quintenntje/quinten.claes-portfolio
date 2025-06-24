@@ -2,27 +2,138 @@ export function expandNavigationMenu() {
   const $openNav = document.getElementById("open-nav");
   const $closeNav = document.getElementById("close-nav");
   const $navList = document.getElementById("nav-list");
+  const $body = document.body;
+
+  const $overlay = document.createElement("div");
+  $overlay.className = "nav__overlay";
+  $overlay.setAttribute("aria-hidden", "true");
+  document.body.appendChild($overlay);
+
+  const $hamburger = document.createElement("div");
+  $hamburger.className = "nav__hamburger";
+  $hamburger.innerHTML = `
+    <span class="nav__hamburger-line"></span>
+    <span class="nav__hamburger-line"></span>
+    <span class="nav__hamburger-line"></span>
+  `;
+
+  const $openIcon = $openNav.querySelector(".icon");
+  if ($openIcon) {
+    $openIcon.style.display = "none";
+    $openNav.appendChild($hamburger);
+  }
 
   const media = window.matchMedia("(width < 768px)");
 
-  if (media.matches) {
-    $navList.setAttribute("inert", "true");
-  } else {
-    $navList.removeAttribute("inert");
+  function updateInertState() {
+    if (media.matches) {
+      $navList.setAttribute("inert", "true");
+    } else {
+      $navList.removeAttribute("inert");
+      closeMenu();
+    }
   }
-
-  $openNav.addEventListener("click", () => {
+  function openMenu() {
     $navList.classList.add("nav-list--open");
-    $openNav.classList.add("nav__button--hidden");
-    $closeNav.classList.remove("nav__button--hidden");
+    $overlay.classList.add("nav__overlay--active");
+    $hamburger.classList.add("nav__hamburger--active");
     $openNav.setAttribute("aria-expanded", "true");
     $navList.removeAttribute("inert");
+    $body.style.overflow = "hidden";
+
+    $openNav.classList.add("nav__button--hidden");
+    $closeNav.classList.remove("nav__button--hidden");
+
+    if (navigator.vibrate) {
+      navigator.vibrate(50);
+    }
+
+    const $navItems = $navList.querySelectorAll(".nav__list-item");
+    $navItems.forEach((item, index) => {
+      item.style.opacity = "0";
+      item.style.transform = "translateX(30px) translateY(10px)";
+
+      setTimeout(() => {
+        item.style.opacity = "1";
+        item.style.transform = "translateX(0) translateY(0)";
+      }, index * 80 + 200);
+    });
+  }
+
+  // Close menu function
+  function closeMenu() {
+    const $navItems = $navList.querySelectorAll(".nav__list-item");
+
+    // Animate items out
+    $navItems.forEach((item, index) => {
+      setTimeout(() => {
+        item.style.opacity = "0";
+        item.style.transform = "translateX(30px) translateY(10px)";
+      }, index * 30);
+    });
+
+    // Close menu after animation
+    setTimeout(() => {
+      $navList.classList.remove("nav-list--open");
+      $overlay.classList.remove("nav__overlay--active");
+      $hamburger.classList.remove("nav__hamburger--active");
+      $closeNav.classList.add("nav__button--hidden");
+      $openNav.classList.remove("nav__button--hidden");
+      $openNav.setAttribute("aria-expanded", "false");
+      $body.style.overflow = "";
+
+      if (media.matches) {
+        $navList.setAttribute("inert", "true");
+      }
+    }, 200);
+  }
+
+  // Initial setup
+  updateInertState();
+
+  // Listen for screen size changes
+  media.addEventListener("change", updateInertState);
+
+  // Event listeners
+  $openNav.addEventListener("click", openMenu);
+  $closeNav.addEventListener("click", closeMenu);
+  $overlay.addEventListener("click", closeMenu);
+
+  // Close menu when clicking on nav links (mobile only)
+  $navList.addEventListener("click", (event) => {
+    if (event.target.matches("a") && media.matches) {
+      closeMenu();
+    }
   });
 
-  $closeNav.addEventListener("click", () => {
-    $navList.classList.remove("nav-list--open");
-    $closeNav.classList.add("nav__button--hidden");
-    $openNav.classList.remove("nav__button--hidden");
-    $openNav.setAttribute("aria-expanded", "false");
+  // Close menu on escape key
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      $navList.classList.contains("nav-list--open")
+    ) {
+      closeMenu();
+    }
+  });
+
+  // Prevent scroll on touch devices when menu is open
+  let startY = 0;
+
+  $navList.addEventListener("touchstart", (e) => {
+    startY = e.touches[0].clientY;
+  });
+
+  $navList.addEventListener("touchmove", (e) => {
+    const currentY = e.touches[0].clientY;
+    const isScrollingUp = currentY > startY;
+    const isScrollingDown = currentY < startY;
+
+    if (
+      ($navList.scrollTop === 0 && isScrollingUp) ||
+      ($navList.scrollTop + $navList.offsetHeight >= $navList.scrollHeight &&
+        isScrollingDown)
+    ) {
+      e.preventDefault();
+    }
   });
 }
