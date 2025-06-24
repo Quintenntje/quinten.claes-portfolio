@@ -8,14 +8,20 @@ import {
   initPullAnimation,
 } from "./animations/index.js";
 
-const loader = initLoader();
-
-
-document.addEventListener("loaderComplete", () => {
+function initializeApp() {
   expandNavigationMenu();
   showBlurEffectOnMouse();
   initModals();
   initScrollAnimations();
   initFlagAnimation();
   initPullAnimation();
-});
+}
+
+const hasLoader = document.getElementById("page-loader");
+
+if (hasLoader) {
+  const loader = initLoader();
+  document.addEventListener("loaderComplete", initializeApp);
+} else {
+  document.addEventListener("DOMContentLoaded", initializeApp);
+}

@@ -10530,15 +10530,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var loader = (0,_loader_js__WEBPACK_IMPORTED_MODULE_3__.initLoader)();
-document.addEventListener("loaderComplete", function () {
+function initializeApp() {
   (0,_navigation_js__WEBPACK_IMPORTED_MODULE_0__.expandNavigationMenu)();
   (0,_mouseAnimations_js__WEBPACK_IMPORTED_MODULE_1__.showBlurEffectOnMouse)();
   (0,_modal_js__WEBPACK_IMPORTED_MODULE_2__.initModals)();
   (0,_animations_index_js__WEBPACK_IMPORTED_MODULE_4__.initScrollAnimations)();
   (0,_animations_index_js__WEBPACK_IMPORTED_MODULE_4__.initFlagAnimation)();
   (0,_animations_index_js__WEBPACK_IMPORTED_MODULE_4__.initPullAnimation)();
-});
+}
+var hasLoader = document.getElementById("page-loader");
+if (hasLoader) {
+  var loader = (0,_loader_js__WEBPACK_IMPORTED_MODULE_3__.initLoader)();
+  document.addEventListener("loaderComplete", initializeApp);
+} else {
+  document.addEventListener("DOMContentLoaded", initializeApp);
+}
 
 /***/ }),
 
