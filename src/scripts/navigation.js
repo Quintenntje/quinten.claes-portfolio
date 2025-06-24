@@ -22,7 +22,6 @@ export function expandNavigationMenu() {
     $openIcon.style.display = "none";
     $openNav.appendChild($hamburger);
   }
-
   const media = window.matchMedia("(width < 768px)");
 
   function updateInertState() {
@@ -33,7 +32,10 @@ export function expandNavigationMenu() {
       closeMenu();
     }
   }
+
   function openMenu() {
+    if (!media.matches) return;
+
     $navList.classList.add("nav-list--open");
     $overlay.classList.add("nav__overlay--active");
     $hamburger.classList.add("nav__hamburger--active");
@@ -60,11 +62,11 @@ export function expandNavigationMenu() {
     });
   }
 
-  // Close menu function
   function closeMenu() {
+    if (!media.matches) return;
+
     const $navItems = $navList.querySelectorAll(".nav__list-item");
 
-    // Animate items out
     $navItems.forEach((item, index) => {
       setTimeout(() => {
         item.style.opacity = "0";
@@ -72,7 +74,6 @@ export function expandNavigationMenu() {
       }, index * 30);
     });
 
-    // Close menu after animation
     setTimeout(() => {
       $navList.classList.remove("nav-list--open");
       $overlay.classList.remove("nav__overlay--active");
@@ -88,25 +89,20 @@ export function expandNavigationMenu() {
     }, 200);
   }
 
-  // Initial setup
   updateInertState();
 
-  // Listen for screen size changes
   media.addEventListener("change", updateInertState);
 
-  // Event listeners
   $openNav.addEventListener("click", openMenu);
   $closeNav.addEventListener("click", closeMenu);
   $overlay.addEventListener("click", closeMenu);
 
-  // Close menu when clicking on nav links (mobile only)
   $navList.addEventListener("click", (event) => {
     if (event.target.matches("a") && media.matches) {
       closeMenu();
     }
   });
 
-  // Close menu on escape key
   document.addEventListener("keydown", (event) => {
     if (
       event.key === "Escape" &&
@@ -116,7 +112,6 @@ export function expandNavigationMenu() {
     }
   });
 
-  // Prevent scroll on touch devices when menu is open
   let startY = 0;
 
   $navList.addEventListener("touchstart", (e) => {

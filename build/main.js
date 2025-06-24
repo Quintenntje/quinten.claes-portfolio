@@ -10641,6 +10641,7 @@ function expandNavigationMenu() {
     }
   }
   function openMenu() {
+    if (!media.matches) return;
     $navList.classList.add("nav-list--open");
     $overlay.classList.add("nav__overlay--active");
     $hamburger.classList.add("nav__hamburger--active");
@@ -10662,20 +10663,15 @@ function expandNavigationMenu() {
       }, index * 80 + 200);
     });
   }
-
-  // Close menu function
   function closeMenu() {
+    if (!media.matches) return;
     var $navItems = $navList.querySelectorAll(".nav__list-item");
-
-    // Animate items out
     $navItems.forEach(function (item, index) {
       setTimeout(function () {
         item.style.opacity = "0";
         item.style.transform = "translateX(30px) translateY(10px)";
       }, index * 30);
     });
-
-    // Close menu after animation
     setTimeout(function () {
       $navList.classList.remove("nav-list--open");
       $overlay.classList.remove("nav__overlay--active");
@@ -10689,33 +10685,21 @@ function expandNavigationMenu() {
       }
     }, 200);
   }
-
-  // Initial setup
   updateInertState();
-
-  // Listen for screen size changes
   media.addEventListener("change", updateInertState);
-
-  // Event listeners
   $openNav.addEventListener("click", openMenu);
   $closeNav.addEventListener("click", closeMenu);
   $overlay.addEventListener("click", closeMenu);
-
-  // Close menu when clicking on nav links (mobile only)
   $navList.addEventListener("click", function (event) {
     if (event.target.matches("a") && media.matches) {
       closeMenu();
     }
   });
-
-  // Close menu on escape key
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape" && $navList.classList.contains("nav-list--open")) {
       closeMenu();
     }
   });
-
-  // Prevent scroll on touch devices when menu is open
   var startY = 0;
   $navList.addEventListener("touchstart", function (e) {
     startY = e.touches[0].clientY;
